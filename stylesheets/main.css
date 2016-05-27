@@ -1996,14 +1996,14 @@ a.noCursor {
 .socilLogin > a {
   border: 1px solid #a0a0a0;
   height: 25px;
-  width: 35%;
+  width: 34%;
   font-size: 68.75%;
   position: relative;
   cursor: pointer;
 }
 /* line 391, ../sass/_element.scss */
 .socilLogin > a.socialLoginYahoo {
-  width: 32%;
+  width: 34%;
 }
 /* line 392, ../sass/_element.scss */
 .socilLogin > a.socialLoginYahoo .socialWord {
@@ -10130,6 +10130,7 @@ footer {
     height: 7.8125vw;
     width: 49%;
     font-size: 87.5%;
+    min-width: 49%;
   }
   /* line 462, ../sass/_rwd.scss */
   .socilLogin > a.socialLoginYahoo .socialWord {

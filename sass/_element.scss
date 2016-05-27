@@ -387,8 +387,8 @@ a{ text-decoration: none; cursor: pointer;
 // social login
 .socilLogin{ @include aColor($colorBlack2);
   >span{ font-size: $font13; vertical-align: super;}
-  >a{ border: 1px solid $colorGray3; height: 25px; width: 35%; font-size: $font11; @extend %inline-block; position: relative; cursor: pointer;
-    &.socialLoginYahoo{ width: 32%;
+  >a{ border: 1px solid $colorGray3; height: 25px; width: 34%; font-size: $font11; @extend %inline-block; position: relative; cursor: pointer;
+    &.socialLoginYahoo{ width: 34%;
       .socialWord{ left: 45px;}
     }
   }

@@ -457,7 +457,7 @@
   // social login
   .socilLogin{ margin-bottom: 8.5vw;
     >span{ font-size: $mfont26; display: block; color: $colorBlack; margin-bottom: 2.8vw;}
-    >a{ height: 7.8125vw; width: 49%; font-size: $mfont21;
+    >a{ height: 7.8125vw; width: 49%; font-size: $mfont21; min-width:49%;
       &.socialLoginYahoo{
         .socialWord{ left: 44%;}
       }
