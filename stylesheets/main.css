@@ -9310,6 +9310,7 @@ footer {
 
   /* line 158, ../sass/_rwd.scss */
   .breadCrumb {
+    display: none;
     font-size: 87.5%;
     position: absolute;
     top: 4.5vw;
@@ -10396,7 +10397,7 @@ footer {
 
   /* line 554, ../sass/_rwd.scss */
   .cart-step {
-    margin: 4vw 0 2.5vw 7.3%;
+    margin: -5vw 0 2.5vw 2%;
   }
   /* line 556, ../sass/_rwd.scss */
   .cart-step ul li {
@@ -10409,6 +10410,7 @@ footer {
   /* line 557, ../sass/_rwd.scss */
   .cart-step ul li.cart-step-now {
     display: block;
+    font-size: 150%;
   }
   /* line 558, ../sass/_rwd.scss */
   .cart-step ul li .cart-line, .cart-step ul li .cart-step-slash {

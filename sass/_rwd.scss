@@ -155,7 +155,7 @@
     margin-right: 8px;
   }
   // breadCrumb
-  .breadCrumb{ font-size: $mfont21; position: absolute; top: 4.5vw; left: 0; width: 100%; margin-bottom: 0; padding-left: 3.125%;
+  .breadCrumb{ display:none; font-size: $mfont21; position: absolute; top: 4.5vw; left: 0; width: 100%; margin-bottom: 0; padding-left: 3.125%;
     &.breadCrumb-noTop{ margin: 0;}
     ul li{
       &.to{ margin: 0 1.4%;}
@@ -551,10 +551,10 @@
 
   //---cart---
   // step
-  .cart-step{ margin: 4vw 0 2.5vw 7.3%;
+  .cart-step{ margin: -5vw 0 2.5vw 2%;
     ul{
       li{ width: 100%; text-align: left; font-size: $mfont26; border:none; display: none;
-        &.cart-step-now{ display: block;}
+        &.cart-step-now{ display: block; font-size: 150%;}
         .cart-line, .cart-step-slash{ display: none;}
         span{ font-size: 150%; margin-right: 1%;}
       }
