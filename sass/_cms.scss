@@ -1,0 +1,40 @@
+@import "compass/css3";
+@import "variable";
+
+.cms-area{
+  // cms 7 area
+  >div{ margin-bottom: 20px;
+    &:nth-last-of-type(1){ margin-bottom: 0;;}
+  }
+  // for series
+  &.cms-area-hasAnchor{
+    // gbcmst01
+    >div{ margin-bottom: 40px;
+      // cms 7 area
+      >div{ margin-bottom: 20px;}
+    }
+  }
+  .cms-img img, .cms-htmlEditor, .csm-text, .cms-form, .cms-youtube{ width: 100%;}
+  .cms-wrap{ overflow: hidden;
+    .cms-wrap-img img{ max-width: 100%;}
+  }
+  .cms-wrap-imgRight{
+    .cms-wrap-img img{ float: right; margin-left: 2%;}
+  }
+  .cms-wrap-imgLeft{
+    .cms-wrap-img img{ float: left; margin-right: 2%;}
+  }
+  .cms-youtube{ position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;
+    iframe, object, embed{ position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+  }
+}
+// about
+.cms-area-about{ margin-top: 0;}
+.cms-link{ color: $colorRed3;}
+.cms-btn{ margin-top: 55px;}
+.cms-anchor{ display: none;}
+// h1-h3
+.cms-h1, .cms-h2, .cms-h3{ line-height: 1.5;}
+.cms-h1{ font-size:200%;}
+.cms-h2{ font-size:187.5%;}
+.cms-h3{ font-size:162.5%;}

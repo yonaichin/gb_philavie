@@ -1,0 +1,15 @@
+{
+  "name": "gb_philavie",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server --ignorePattern=.scss",
+    "compass": "compass watch config"
+  },
+  "author": "Olly.W",
+  "license": "ISC"
+}

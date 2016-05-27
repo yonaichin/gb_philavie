@@ -1,0 +1,207 @@
+@import "compass/css3";
+@import "variable";
+
+//---wrap---
+.body-activity{ background-color: #fff;}
+.wrap{ max-width: $maxWidth; min-height: $full; margin: 0 auto; min-width: $min-width;}
+#main{ width: 100%; padding-top: 149px; margin-bottom: 150px;
+  &.scrollFix{ padding-top: 85px;}
+  &.areaSplit{ @extend %flowHidden;}
+  &.mainNoBottom{ margin-bottom: 50px;}
+  &.main-hasFloat{ @extend %flowHidden;}
+  &.main-search{ margin-top: 40px;}
+  &.main-flowHidden{ @extend %flowHidden;}
+  &.main-activity{ width: 1200px;}
+  &.main-headerhidden{ padding-top: 0;}
+  &.main-footerhidden{ margin-bottom: 0;}
+}
+
+//---five block (for footer)---
+.fiveBlock{ @extend %flowHidden;
+  a{ @include calWidthMargin($full, 5, 0.25%); height: 100%; @extend %floatLeft;
+    &:nth-of-type(1){ padding-left: 0;}
+  }
+}
+.fiveBlockMargin{ @extend %flowHidden;
+  >div{ @include calWidthMargin($full, 5, 0.25%); margin-left: 0.25%; height: 100%; @extend %floatLeft;
+    &:nth-of-type(1){ margin-left: 0;}
+  }
+}
+
+//---5 column---
+.column5-margin{@extend %flowHidden;
+  >ul>li{ @include calWidthMargin($full, 5, 0.03%); @extend %floatLeft;}
+}
+
+//---4 column---
+.column4{ @extend %flowHidden;
+  >ul>li{ @include calWidthMargin($full, 4, 0.25%); @extend %floatLeft;}
+}
+
+.column4-qamargin{ @extend %flowHidden;
+  >ul>li{ @include calWidthMargin($full, 4, 0.03%); @extend %floatLeft;}
+}
+
+//---4 column---
+.column4-nomargin{ @extend %flowHidden;
+  >ul>li{ @include calWidth($full, 4); @extend %floatLeft;}
+}
+
+//---3 column---
+.column3{ @extend %flowHidden;
+  ul li{ @include calWidth($full, 3); @extend %floatLeft;}
+}
+
+.cloumn3-margin{@extend %flowHidden;
+  ul li{ @include calWidthMargin($full, 3, 1.9%); @extend %floatLeft;}
+}
+
+//---2 column---
+.column2{ @extend %flowHidden;
+  ul li{ @include calWidth($full, 2); @extend %floatLeft;}
+}
+
+.cloumn2-margin{@extend %flowHidden;
+  ul li{ @include calWidthMargin($full, 2, 2.3%); @extend %floatLeft;}
+}
+
+.cloumn2-margin2{@extend %flowHidden;
+  ul li{ @include calWidthMargin($full, 2, 1.5625%); @extend %floatLeft;}
+}
+
+//---header pc hover list---
+.hoverList{ padding: 35px 5.15% 14px; width: 100%; text-align: left; font-size: 100%; line-height: 1.3; height: 100%; @extend %flowHidden;
+  li{ @extend %floatLeft;
+    a{ display: block;}
+  }
+  .medTitle{ color: $colorPink2; padding: 0 0 12px 0; border-bottom: 1px solid $colorPink5; margin-bottom: 14px; font-size: 16px;}
+}
+
+//---header pc hover---
+.headHoverActivity{
+  >li{ margin-left: 7.5%; width: 17.15%; @include aColor($colorBlack);
+    &:nth-of-type(1){ margin-left: 0; width: 75.35%;
+      >a{ @extend %inline-block; margin-left: 3.6%;
+        &:nth-of-type(3n+1){ margin-left: 0;}
+        &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3){ margin-bottom: 10px;}
+      }
+    }
+    &:nth-of-type(2){
+      li{ display: block; float: none; @include aColor($colorBlack); font-size: 14px; margin-bottom: 8px;}
+    }
+    .medTitle{ display: block;}
+    .imgLarge{ width: 41%;}
+    .imgMiddle{ width: 31%;}
+    .imgSmall{ width: 19%;}
+    img{ width: 100%; height: auto;}
+    .actibityDesc{ font-size: 14px;}
+  }
+}
+
+.headHover2{
+  >li{ margin-left: 3%; @include calWidthMargin($full, 2, 3); height: 100%; position: relative;
+    &:nth-of-type(1){ margin-left: 0;}
+    .medTitle{ margin-bottom: 0;}
+    img{ width: 100%; height: auto; position: absolute; bottom: -4%; left: 0;}
+    ul{ @extend %flowHidden; border-bottom: 1px solid $colorPink5;
+      li{ @include calWidth($full, 2); @include aColor($colorBlack); font-size: 14px; border-bottom: 1px solid $colorGray; padding-left: 4.2%; height: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+.headHover2-1{ height: 58%;
+  >li{ margin-left: 1.8%; @include calWidthMargin($full, 3, 1.8); height: 100%; position: relative;
+    &:nth-of-type(1){ margin-left: 0;}
+    .medTitle{ margin-bottom: 0;}
+    img{ width: 100%; height: auto; position: absolute; bottom: -4%; left: 0;}
+    ul{ @extend %flowHidden; border-bottom: 1px solid $colorPink5;
+      li{ @include calWidth($full, 2); @include aColor($colorBlack); font-size: 14px; border-bottom: 1px solid $colorGray; padding-left: 4.2%; height: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+.headHover3{ color: $colorBlack;
+  >li{ margin-left: 4.16%; height: 100%; position: relative;
+    &:nth-of-type(3n+1){ margin-left: 0;}
+    &:nth-of-type(1), &:nth-of-type(3){ width: 29.58%;}
+    &:nth-of-type(2){ width: 32.52%;}
+    ul{ @extend %flowHidden; border-bottom: 1px solid $colorPink5;
+      li{ @include calWidth($full, 2); @include aColor($colorBlack); font-size: 14px; border-bottom: 1px solid $colorGray; padding-left: 4.2%; height: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+  &.about{
+    >li{ margin-left: 4.8%; @include calWidthMargin($full, 3, 4.8%); margin-bottom: 28px;
+      &:nth-of-type(1){ margin-left: 0;}
+      .medTitle{ margin-bottom: 0;}
+      img{ width: 100%; height: auto; position: absolute; bottom: -2%; left: 0;}
+    }
+  }
+  .medInfo2{ @extend %flowHidden;
+    a{ @extend %floatLeft; width: 48.6%;
+      &:nth-of-type(1){ margin-right: 2.8%;}
+    }
+  }
+  .medInfo{ background-color: #fff; border: 1px solid $colorGray2; padding: 2.1%; height: 249px; overflow: hidden; position: relative; margin-bottom: 15px;
+    img{ width: 100%;}
+    .medSmall{ font-size: 12px; color: $colorPink4; border-top: 1px solid $colorPink5; position: absolute; bottom: 0; left: 0; padding: 7px 2.1%; width: 100%;}
+    .medContent{ font-size: 14px; line-height: 1.5; margin-top: 10px;}
+    &.medInfoTo2{ width: 100%;
+      .medSmall{ padding: 7px 4%;
+        span:nth-of-type(2){ position: absolute; right: 4%; bottom: 7px;}
+      }
+    }
+  }
+  .btn{ width: 79px; padding: 6px 0; @extend %floatRight; font-size: 14px;}
+}
+
+.headHover4{ color: $colorBlack;
+  >li{ margin-left: 2.26%; @include calWidthMargin($full, 4, 2.26); height: 100%; position: relative;
+    &:nth-of-type(1){ margin-left: 0;}
+    ul{ @extend %flowHidden; border-bottom: 1px solid $colorPink5;
+      li{ @include calWidth($full, 2); @include aColor($colorBlack); font-size: 14px; border-bottom: 1px solid $colorGray; padding-left: 4.2%; height: 30px;
+        line-height: 30px;
+        &:nth-of-type(9), &:nth-of-type(10){ border-bottom: 0;}
+      }
+    }
+  }
+  .medInfo{ background-color: #fff; border: 1px solid $colorGray2; padding: 2.8% 3% 2.1%; height: 249px; overflow: hidden; position: relative; margin-bottom: 15px;
+    img{ width: 100%; max-height: 145px;}
+    .medSmall{ font-size: 12px; color: $colorPink4; border-top: 1px solid $colorPink5; position: absolute; bottom: 0; left: 0; padding: 7px 3.5%; width: 100%;
+      span:nth-of-type(2){ position: absolute; right: 4%; bottom: 7px;}
+    }
+    .medContent{ font-size: 14px; line-height: 1.5; margin-top: 10px;}
+  }
+  .btn{ width: 79px; padding: 6px 0; @extend %floatRight; font-size: 14px;
+    .arrowRight{ vertical-align: baseline; margin: 1% -15% 0 5%; border-width: 6px 9px; border-color: transparent transparent transparent $colorPink15;}
+  }
+}
+
+// left small and right large for cms
+.leftSmall, .rightLarge{ @extend %floatLeft; min-height: 1px;}
+.leftSmall{ width: 28%;}
+.rightLarge{ width: 72%;}
+
+// left area and right area for framework
+.leftArea, .rightArea{ @extend %floatLeft;}
+.leftArea{ width: 26.25%; padding-left: 4.8%;
+  &.leftArea-index{ padding: 0 1.1% 0 3.8%;}
+}
+.rightArea{ width: 73.75%; padding: 0 1.8% 0 1.85%;
+  &.rightArea-index{ padding: 0;}
+}
+
+// product introduce pc
+.pcProIntroduceInfo{ @extend %flowHidden; margin-bottom: 70px;
+  >div{ @extend %floatLeft; width: 50%;}
+}
+
+.proImgLarge{ border-bottom: 1px solid $colorOrange2; text-align: center; margin-bottom: 30px; padding-bottom: 30px;
+  img{ height: auto; width: 100%;}
+}
+

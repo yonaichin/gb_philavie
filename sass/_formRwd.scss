@@ -1,0 +1,376 @@
+@import "compass/css3";
+@import "variable";
+
+@media all and (max-width: 767px){
+  //---input style---
+  .inputStyle{ height: 8.28vw; margin-bottom: 1.875vw; border: none;
+    input{ font-size: $mfont2127; border: 1px solid $colorGray5;}
+  }
+  .inputStyle-marTop{ margin-top: 0;}
+
+  // chkbox and forget password
+  .chkForget{ font-size: $mfont18; height: auto; padding-top: 0; width: 100%; text-align: right; margin-bottom: 3.125vw;
+    >div{ width: 76%;
+      &.forgetPass{ width: 19%;}
+    }
+    .chkImg{ margin-right: 3%;}
+  }
+
+  .chkBox{
+    &.chkBox-registerLink{ margin-bottom: 7vw;
+      &.chkBox-cart{ margin-bottom: 0; padding-bottom: 9vw;}
+    }
+  }
+  .form-cart-chk{
+    .chkImg{ vertical-align: baseline;}
+    &.form-cart-chkReceiver{ padding-left: 4%; font-size: $mfont21; margin-bottom: 5vw;
+      .chkImg{ margin-right: 1.5%; vertical-align: baseline;}
+    }
+  }
+
+  //---chk radio---
+  .chkRadio{ width: 2.5vw; height: 2.7vw;}
+
+  //---forget password---
+  .forgetPass{ margin-left: 3%; padding-left: 0;}
+
+  //---form---
+  .form{ border: none; padding-bottom: 7.5vw;
+    &:not(.form-hasDataBottom){ margin-bottom: 0;}
+    &.form-contentLongNotEqual{
+      .table{
+        &:nth-of-type(1), &:nth-of-type(2){ width: 100%;}
+        &.table1of2, &.table2of2{ padding: 0 4%;}
+        &.table-column2{
+          .td:nth-of-type(2){
+            &:not(.td-address){
+              .inputStyle{ width: 85%;}
+            }
+          }
+          &.table2of2{
+            .td:nth-of-type(2){
+              &:not(.td-address){
+                .inputStyle{ width: 85%;}
+              }
+            }
+          }
+        }
+      }
+    }
+    &.form-survey{ margin-bottom: 0; padding-bottom: 0;}
+    &.form-borderBottom{ margin-bottom: 2vw; padding-bottom: 0;
+      &.form-cart{ padding-bottom: 9vw;}
+    }
+    &.form-cart{
+      .table.table-column2{
+        .td:nth-of-type(2){ padding-left: 2%;}
+        &.table-cart-member{
+          .tr:not(.tr-hasRadioBox){
+            .td:nth-of-type(1){ padding-left: 4%;}
+          }
+          .tr-hasRadioBox{
+            .td{ vertical-align: middle;}
+            .chkRadio.chkRadio-middle{ vertical-align: baseline;}
+          }
+        }
+        .tr-invoice{ line-height: 2.2;
+          .td:nth-of-type(1){ padding: 0 0 0 4%; line-height: 2;}
+          .td:nth-of-type(2){ font-size: $full;}
+          .radioImgGray{ margin: 0 2.5% 3px 0;}
+          .td-indent{ padding-left: 12%;}
+        }
+        .td-indent-invoice2 .chkRadioBtn{
+          .chkRadio{ margin-top: 4.8%;}
+        }
+      }
+    }
+  }
+  .form-title{ height: 7vw; line-height: 7vw; margin-bottom: 5.9vw;
+    &.form-title-pink{ font-size: $mfont30;}
+  }
+  .form-refundStyle{ padding: 0;
+    .form-refundStyle-title{ font-size: $mfont26; width: 100%; height: 6.25vw; line-height: 6.25vw; text-align: left; padding-left: 7.8125%; margin-bottom: 4.6875vw;}
+    .form-refundStyle-table{ padding-left: 8%; margin-bottom: 3vw;
+      .td{ padding-bottom: 3.75vw;}
+    }
+    .form-refundStyle-tdTitle{ font-size: $full; width: 28%; padding-left: 4%;}
+    .selectLabel, .selectLabel select, input{ width: 80%; height: 6.25vw; line-height: 6.25vw;}
+    .selectLabel-mSmall, .selectLabel-mSmall select{ width: 40%;}
+    textarea{ width: 80%; height: 31.25vw; padding: 0 3%; font-size: $full;}
+    input{ padding-left: 3%;}
+    .radioBox{ float: none; display: inline; margin-right: 2%;}
+    .chkRadio.radioImg, .chkRadio.radioImgWhite{ margin: 0 1% 3px 0;}
+  }
+  .form-refundStyle-tdBig{
+    .form-refundStyle-tdTitle{ width: 35%;}
+    .form-refundStyle-tr .td{ padding-bottom: 3.75vw;
+      &.td-no-paddBottom{ padding-bottom: 0;}
+      &.justify{ padding-bottom: 1vw;}
+    }
+    .form-refundStyle-trTdPaddingB .td{ padding-bottom: 1vw;}
+  }
+  .form-refundStyle-tdBig-mTitleSmall{
+    .form-refundStyle-tdTitle{ width: 27%;}
+    .td{ padding-left: 0;}
+    textarea{ width: 86%;}
+  }
+  .form-refundStyle-noticePink{ font-size: $mfont21; margin-bottom: 3.9vw;
+    a{ padding-bottom: 0.4vw;}
+  }
+  .form-refundStyle-noticeRed{ margin-bottom: 12vw;}
+  .table{ width: 100%;
+    &.table1of2, &.table2of2{ padding: 0 4%;}
+    &.table-column2{
+      .td:nth-of-type(1){ width: 22.5%;}
+      .td:nth-of-type(2){ width: 71.5%;}
+    }
+    &.table-column1{ width: 100%; padding: 0 3.125%; margin-bottom: 9vw;}
+    &.table-survey{
+      .td{ padding: 4.6975vw 0;
+        &:nth-of-type(1){ width: 68%; padding: 0 2%;}
+        &:nth-of-type(2){ font-size: $full;}
+      }
+    }
+    &.table-survey-full{ margin-top: 6vw;
+      .tr-line{ overflow: hidden; display: block;}
+      .td{ padding: 0;
+        &:nth-of-type(1), &:nth-of-type(2){ padding-left: 2%; display: inline-block;}
+        &:nth-of-type(1){ width: 68%; line-height: 1.7; vertical-align: middle;}
+        &:nth-of-type(2){ width: 32%; vertical-align: middle; padding-left: 0;}
+        &.td-line{ line-height: 1; height: 1px; padding: 0; background-color: $colorGray; vertical-align: middle; float: left; margin: 6vw 0;}
+      }
+    }
+  }
+  .tr{
+    &.table-style-th{ background-color: $colorGray; line-height: 6.4vw; height: 6.4vw;}
+    &.tr-hasColspan{
+      .td{ padding-bottom: 1.5vw;}
+    }
+  }
+  .td{ font-size: $mfont26; vertical-align: baseline;
+    &.td-colspan{ font-size: $mfont21; padding-bottom: 5vw;}
+    &.td-hasRadioBoxSelect{ height: 11.5vw;}
+    &.td-smallWidth{ width: 20%;}
+    &.td-wmiddle{ width: 20%;}
+    &.td-wbig{ width: 28%;}
+    &.td-wsmall, &.td-mSmallwidth{ width: 16%;}
+    &.td-mMiddlewidth{ width: 20%;}
+    &.td-mBigwidth{ width: 25%;}
+    &.td-mLargeWidth{ width: 35%;}
+    &.td-mSmallerWidth{ width: 15%;}
+    &.td-whuge{ width: 50%;}
+    &.td-emailValue{ height: 10vw;}
+  }
+
+  //---select---
+  .selectLabel{ font-size: $mfont20;
+    select{ height: 8vw; font-size: $full;
+      &.select-minWidth{ width: 39%;}
+      &.survey-select-m{ width: 100%;}
+    }
+    &.select-maxWidth select{ max-width: 31%;}
+  }
+
+  .form-title-padding{ padding: 0 3.125%; font-size: $mfont36;
+    &.purpleTitle{ font-size: $mfont36; text-align: center; border-bottom: 1px solid $colorGray; margin: 0 3.125%; padding-bottom: 4.68vw;}
+  }
+
+  // form btn
+  .formBtns{ text-align: center;
+    .btn{ font-size: $mfont30; height: 9.375vw; line-height: 9.375vw}
+  }
+
+  //---table style---
+  .table-style{ margin-top: 4.6875vw;
+    // bonus
+    &.table-style-bonus{ margin-top: 5vw;}
+    .table-style-1line{ padding-left: 5.5%; margin-bottom: 7.5vw;
+      .table-style-item{ width: 25%; height: 8.28vw; line-height: 8.28vw; margin-right: 1.5625%; background-color: $colorGray;}
+      .table-style-column{
+        input, .table-style-item{ font-size: $mfont26; padding-left: 0;}
+        input{ border: 1px solid $colorGray;}
+      }
+      .table-style-column1, .table-style-column2{ width: 100%;
+        .table-style-item{ width: 25%;}
+        input{ width: 68%;}
+      }
+      .table-style-column2{ padding-left: 0;
+        input{ width: 26%; padding-left: 1.5%;}
+      }
+    }
+    .table-style-1line-noInput{ margin-bottom: 5.46875vw; padding: 0 9%;
+      .table-style-value{ height: 8.28vw; line-height: 8.28vw;}
+      .table-style-column1, .table-style-column2, .table-style-column3{ width: 100%; padding-left: 0; margin-bottom: 2vw;
+        .table-style-item{ width: 31%; margin-right: 3%;}
+        .table-style-value{ width: 66%; padding-left: 4%; text-align: left;}
+      }
+    }
+    .table-style-column6{ font-size: $mfont2127; margin-bottom: 7.8125vw;
+      .td{ border-width: 1px 0 0;
+        &:nth-of-type(1){ border-left-width: 0;}
+      }
+      .tr{
+        &:not(.table-style-th){
+          .td{ padding: 3vw 0;}
+        }
+      }
+      //---q&a table style
+      &.table-qa{ margin-bottom: 0;
+        .td-qa-middle{ width: 25%;}
+        .td-qa-big{ width: 75%;}
+        .table-qa-title{ width: 26%; height: 6.5625vw; line-height: 6.5625vw; margin: 2.3vw 2%; padding: 0 3%;}
+        .table-qa-content{ font-size: $full; margin-bottom: 25px; padding: 0 2% 0 2.5%;}
+        .tr{
+          &:not(.table-style-th){
+            .td{ padding: 0;}
+          }
+        }
+
+        .td-rowspan{ font-size: $full; border-right-width: 1px;}
+      }
+      //---bounus table style---
+      &.table-bonus{ margin-bottom: 0;
+        .td-bonus{
+          .td-bonus-item{ padding-left: 15%; width: 58%;}
+          .td-bonus-amount{ padding-left: 0; width: 42%;}
+        }
+      }
+      //---cart---
+      &.table-cart{
+        .tr.m{ display: table-row;}
+        .tr.pc, .td.pc{ display: none;}
+        .td.m{ display: table-cell;}
+        .td{ line-height: 1.5; position: relative;
+          img{ width: 90%;
+            &.cart-delete{ width: 27%; position: absolute; bottom: 3.5vw; right: 35%;}
+          }
+        }
+        .tr{
+           &:not(.table-style-th){
+             .td{ padding-bottom: 7vw;}
+           }
+         }
+        // width
+        .td-cart-wSmall{ width: 30%;}
+        .td-cart-wBig{ width: 37%;}
+        .td-cart4-wSmall{ width: 20%;}
+        .td-cart4-wBig{ width: 40%;}
+        .td-cart-mwMiddle{ width: 18%;}
+        .td-cart-mwSmall{ width: 15%;}
+        // product name
+        .td-cart-pro{ font-size: $full;}
+        .td-cart-proNum{ font-size: 75%; margin-right: 0; display: block;}
+        .td-cart-proGift{ font-size: 83%;}
+        // pro price
+        .td-cartPrice{ font-size: $mfont22;}
+        .td-cart-price{ font-size: $full;}
+        .td-cartPrice-mtotal{ color: $colorPink9; font-size: 109%;}
+        // amount
+        .selectLabel{ font-size: $mfont20;}
+      }
+      //---browse track---
+      &.table-browseTrack{
+        .td{
+          >img{ width: 80%; height: auto;}
+          &.td-mLargeWidth{ text-align: left;}
+        }
+      }
+    }
+    // cart title
+    .table-cart-mTitle{ background-color: $colorGray3; color: #fff; height: 6.4vw; line-height: 6.4vw;}
+    .td-rowspan{ top: 6.6vw; font-size: $full; border-right-width: 1px;}
+    // gift
+    &.table-style-gift{ margin-bottom: 18.75vw;
+      .td{ width: 94%; margin: 0 3% 7vw; padding-bottom: 9vw; border-bottom: 1px solid $colorGray;}
+      // img and intro area
+      .td-gift-intro{ padding-right: 0;}
+      .td-gift-img{ height: 45.5vw; padding: 5vw 1% 0 0;
+        img{ width: 100%; height: auto;}
+      }
+      // num and title
+      .td-giftIntro-title{ padding-left: 4%;}
+      .td-giftIntro-titleMain{ font-size: $mfont31;}
+      .td-giftIntro-num{ font-size: $mfont88;}
+      // text
+      .td-giftIntro-text{ margin: 1vw 0 2vw; line-height: 1.7; padding-top: 0;}
+      // price
+      .td-gift-price{ font-size: $mfont2127; padding-right: 2%;}
+    }
+  }
+  // table wrap
+  .table-wrap{ margin-bottom: 7.3vw; border: none;
+    &.table-wrap-cart{ margin-bottom: 0;}
+    &.table-wrap-cart4{ margin-top: 2vw;
+      .table-style-column6{ margin-bottom: 2vw;}
+    }
+    // detail
+    .order-detailArea{ padding: 0 4.6875vw 10%; text-align: left; font-size: $mfont2127;}
+    // gift detail
+    .gift-detailArea{
+      .order-detail-pro{ width: 70%;}
+      .order-detail-price{ width: 30%;}
+    }
+    // equal width
+    .order-detail-width{ width: 100%;}
+    // name, amount, price
+    .order-detail-pro, .order-detail-price{ float: left; width: 70%;}
+    .order-detail-price{ width: 30%; padding: 0 1% 0 3%;}
+    .pro-name{ padding-left: 20%;}
+    .order-detail-time{ padding-left: 14%; margin-bottom: 2vw;}
+    // btn
+    .order-detail-btn{ text-align: center; margin-top: 10%;
+      .btn{ width: 44.2%; height: 11vw; line-height: 11vw; font-size: 141%; display: inline-block;
+        &.pc{ display: none;}
+      }
+      .btnGrayLight{ margin: 0 1.3% 0 0;}
+    }
+    // process img
+    .process-imgArea{ margin-bottom: 5vw; width: 65%; margin-left: 22%;
+      .process-img{ @include bgImg('order/orderDetail.png', auto 160%); width: 23.0625%; height: 10.78125vw; margin: 0; position: absolute; top: 20%; left: 15%;}
+      .order-detail-width{ height: 18.75vw;
+        &:nth-of-type(1) .process-img{ background-position: 2% 1vw;}
+        &:nth-of-type(2) .process-img{ background-position: 33.7% 3%;}
+        &:nth-of-type(3) .process-img{ background-position: 65.7% 13%;}
+        &:nth-last-of-type(1) .process-img{ background-position: 97.2% 13%;}
+      }
+      &.process-imgArea-refund{ width: 70%; margin-left: 15%;
+        .process-img{ background-image: url("../images/order/refundProcess.png"); background-size: auto 156%; width: 37.8125%; height: 12vw; left: 9.5%;}
+        .order-detail-width{ height: 24vw;
+          &:nth-of-type(1) .process-img{ background-position: 1.5% 0.5vw;}
+          &:nth-of-type(2) .process-img{ background-size: auto 135%; background-position: 33.69% -15%;}
+          &:nth-of-type(3) .process-img{ background-position: 65.5% -12%;}
+          &:nth-last-of-type(1) .process-img{ background-position: 98% 0;}
+          .singleLineGray{ left: 2%;}
+        }
+        .order-process-refundNote{ font-size: $full;  height: auto; padding-left: 52%; text-align: left; margin-bottom: 1vw;}
+        .order-time, .order-process-name{ padding-left: 52%;}
+        .order-time{ margin-top: 0;}
+      }
+    }
+    // process time and location
+    .order-process-time{
+      .order-detail-width{ position: relative;
+        .singleLineGray{ margin-top: 0; height: 100%; width: 1px; position: absolute; top: 0; left: 5%;}
+        &:nth-of-type(1){
+          .singleLineGray{ width: 1px; margin-left: 0;}
+          .order-time{ width: 100%; margin-left: 0;}
+          .order-process-circle{ left: -4px;}
+        }
+        &:nth-last-of-type(1){
+          .singleLineGray{ width: 1px; margin-right: 0;}
+          .order-time{ width: 100%; margin-right: 0;}
+          .order-process-circle{ left: -4px;}
+        }
+      }
+      .order-time, .order-process-name{ margin: 0; padding-left: 43%; text-align: left; font-size: $mfont2127;}
+      .order-process-name{ font-size: $mfont26; line-height: 1.7; margin-top: 4vw;}
+    }
+  }
+  //---browse track mobile table title---
+  .m-table-title{ overflow: hidden; background-color: $colorGray; height: 6.4vw; line-height: 6.9vw; font-size: $mfont2127;
+    >div{ float: left;
+      &:nth-of-type(1){ width: 55%; padding-left: 20%;}
+      &:nth-of-type(2){ width: 45%;}
+    }
+  }
+}

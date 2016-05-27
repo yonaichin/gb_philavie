@@ -1,0 +1,839 @@
+@import "compass/css3";
+@import "variable";
+
+//-----------common-----------
+*{ -webkit-text-size-adjust: none; -webkit-overflow-scrolling: touch; box-sizing: border-box; outline: none; -webkit-tap-highlight-color: rgba(201, 224, 253, 0);}
+*:focus{ outline: none;}
+.hamFixNoScroll{ @extend %flowHidden;}
+
+.text-left{ text-align: left;}
+.text-center{ text-align: center;}
+.text-right{ text-align: right;}
+
+//---btn a wrap---
+.btn-a-wrap{ display: block;}
+
+//---pc follower---
+.pc-follower{ width: 65px; border: 1px solid rgba(229,216,227,0.8); background-color: #fff; position: fixed; top: 50vh; right: 0; text-align: center; z-index: 900;
+  &:hover{
+    .follower-more{ background: #fff; padding-bottom: 20px;}
+    .follower-more-img{ background-image: none;}
+    .follower-more-text{ display: block;}
+    .follower-more-info{ margin-top: 1px; padding-bottom: 9px; height: 175px;}
+  }
+}
+// follower cart
+.follower-cart{ font-size: $font14; line-height: 1.7; margin-bottom: 8px;}
+.follower-cart-cartImg{ width: 24px; height: 19px; @include bgImg('common/follower.png', 100% auto); background-position: 0 100%; @extend %inline-block;
+  margin: 11px 0 0;}
+// follower more
+.follower-more{ height: 21px; @include gradient2(#ae7ea3, #722267); line-height: 21px;}
+.follower-more-img{ width: 13px; height: 8px; @include bgImg('common/arrowDownWhite.png', 100% auto); @extend %inline-block;}
+// follower more info
+.follower-more-text{ font-size: $font12; @include transform(scale(0.8)); margin-left: -80%;}
+.follower-more-text{ display: none;}
+.follower-more-info{ background-color: #fff; border: solid rgba(229,216,227,0.8); border-width: 0 1px 1px; width: 65px; position: relative; left: -1px;
+  height: 0; overflow: hidden;}
+.follower-info-total{ font-size: $font20; padding: 9px 0 25px;}
+.follower-info-odds{ font-size: $font12; color: $colorPink2; margin-bottom: 15px; line-height: 1.4;}
+.follower-info-check.btn{ @include gradient2(#ae7ea3, #722267); width: 90%; height: 23px; color: #fff; font-size: $font14; @extend %inline-block;
+  line-height: 23px; margin-bottom: 9px;}
+// pc back top
+.pc-backtop{ font-size: $font13; cursor: pointer;
+  .backTop-arrow{ width: 24px; height: 19px; @include bgImg('common/follower.png', 100% auto); margin: 0 auto;}
+}
+.m{ display: none;}
+
+a{ text-decoration: none; cursor: pointer;
+  &.noCursor{ cursor: default;}
+}
+
+.clearFix{ clear: both;}
+
+.hidden{ display: none;}
+
+// animation
+.animation{ @include transition( 0.6s all linear);}
+.animationHeight{ @include transition( 0.42s height ease-in-out);}
+.animationDelay{ @include transition( 0.6s 0.15s all linear);}
+
+// banner
+#banner{ width: 100%; height: auto;
+  img{ width: 100%; height: auto;}
+  &.banner-index{ margin-bottom: -30px;
+    img{ width: 100%; height: 41.25vw; max-height: 496px;}
+  }
+}
+.banner-small{
+  img{ width: 100%; height: auto;}
+}
+
+// word wrap
+.wordWrap{ overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+
+// x btn
+.xBtn{ width: 17px; height: 16px; @include bgImg("common/x.png", 100% auto); position: absolute; cursor: pointer;}
+
+
+// lines
+.line{ padding: 0 0.4%;}
+// vertical line
+.verLine{ width: 0.25%; height: 100%; background-color: #000;}
+// horizontal line
+.horLine{ width: 100%; height: 1px; background-color: #000;}
+
+// ul separate to 2 lines
+.twoLine{
+  li{ @extend %inline-block; width: 48%;}
+}
+
+// pink color for mobile cs number
+.colorPink{ color: $colorPink;}
+
+// li inline block
+.inlineBlock{ display: inline;
+  li{ @extend %inline-block;}
+}
+
+//---btn---
+// social btn
+.socialBtn{ height: 36px; @extend %inline-block; color: #fff; vertical-align: text-bottom; font-size: 129.75%; line-height: 36px; cursor: pointer;}
+// btn
+.btn{ cursor: pointer; color: $colorPink4; font-size: 100%; border: 1px solid $colorPink4; margin: 0 auto; text-align: center; display: block;
+  &.m{ display: none;}
+}
+
+// border radius
+.radius{ @include border-radius(7px);}
+.radius5{ @include border-radius(5px);}
+
+// mask
+.mask{ position: fixed; top: 0; left: 0; width: $full; height: 100vh; background-color: rgba(0,0,0,0.5); z-index: 900;}
+
+// search icon
+.searchIcon{ @include bgImg("common/searchIcon.png", auto 18px); width: 17%; height: 18px; margin-top: 9px; @extend %inline-block;}
+
+// m search and close icon
+.mXsearchIcon{ @include bgImg("common/mSearchX.png", 100% auto); width: 9.6%; @include mSetHeight(38); @extend %inline-block;}
+
+
+// breadCrumb
+.breadCrumb{ @include aColor($colorBlack3); font-size: $font14; color: $colorBlack3; padding-left: 4.5%; margin-bottom: 20px; @include aHover($colorPink17);
+  &.breadToLeft{ padding-left: 0;}
+  &.breadCrumb-noTop{ margin: 30px 0 20px;}
+  &.breadCrumb-marginBottom{ margin-bottom: 30px;}
+  ul li{ @extend %inline-block; line-height: 1.7;
+    &.to{ margin: 0 1.3%;}
+  }
+  &.breadCrumb-small{
+    ul li.to{ margin: 0 5.79%;}
+  }
+}
+.breadCrumb-now{ @include aColor($colorPink17);}
+
+// pro advantage
+.proAdvantage{ margin-bottom: 58px;
+  h1, div{ @extend %inline-block; @extend %verMiddle;}
+  h1{ font-size: $font3115; color: $colorOrange; width: 249px; padding-left: 7%; @extend %lineHeight13;}
+  div{ width: 66%; padding-left: 8%; line-height: 1.5; font-size: $full; color: $colorGray3;}
+}
+
+// pro list
+.proInfoList{ margin-bottom: 40px;
+  ul{ @extend %flowHidden;
+    li{ text-align: center; margin-bottom: 40px;
+      .proImg{ margin-bottom: 15px; height: 214px;
+        img{ height: 100%; width: auto;}
+      }
+      .proTitle, .proSaleInfo, .proPack{ line-height: 1;}
+      .proTitle{ color: $colorPink2; font-size: $font21; @extend %lineHeight15; margin-bottom: 11px;}
+      .proSaleInfo{ font-size: $full; color: $colorBlack3; @extend %lineHeight15; margin-bottom: 4px;}
+      .procapacity, .proPack{ font-size: $font13; color: $colorBlack3; @extend %lineHeight15; margin-bottom: 20px;}
+      .btn{ font-size: $font20; width: 60%; margin: 0 auto; padding: 7px 0;}
+    }
+  }
+}
+
+// page title
+.pageTitle{ text-align: center; border-bottom: 1px dotted #c6a5bf;
+  &.pageTitle-news{ margin-bottom: 10px;}
+  >div{ display: inline-block; margin: 0 auto; min-width: 259.188px; padding-bottom: 8px; position: relative;
+    .pTitle, h6, .qa-classify-title{ @extend %inline-block; @extend %verMiddle; line-height: 1;}
+    .pTitle{ font-size: $font36; color: $colorBlack;}
+    h6{ text-align: right; color: $colorGray2;}
+    .qa-classify-title{ font-size: $full;}
+  }
+  .pageTitle-news-h1{ font-size: $font32; font-weight: 100; width: 100%; color: $colorBlack; line-height: 1;
+    .pageTitle-news-small{ font-size: 71.875%; margin-right: 2.8%;}
+  }
+  &.pageTitleBottom{ margin-bottom: 40px;}
+}
+
+// content title
+.contentTitle{ color: $colorBlack; text-align: center; padding-bottom: 10px; border-bottom: 1px solid $colorPink2; margin-bottom: 45px;
+  div{ line-height: 1; font-size: 200%;}
+}
+
+// bonus history style title
+.bonusHistory-title{ color: $colorBlack3; font-size: $font24; width: 90%; margin: 0 auto; text-align: center; font-weight: 100;}
+
+// double line
+.doubleLine{ width: 100%; height: 2px; background-color: $colorPink3; border-bottom: 1px solid $colorPink4; position: absolute; bottom: -1px; left: 0;}
+.doubleLineBlack{ width: 100%; height: 2px; background-color: $colorBlack3; border-bottom: 1px solid $colorBlack; @extend %floatLeft;}
+.singleLineGray{ width: 100%; height: 1px; background-color: $colorGray; @extend %floatLeft; position: relative;
+  .order-process-circle{ width: 12px; height: 12px; background-color: $colorPink2; @include border-radius(50%); position: absolute; top: -6px; left: 48%;
+    opacity: 0;}
+}
+
+// fb area
+.fbArea{ text-align: right; margin: 30px 0 24px;
+  div{ display: inline-block;}
+}
+
+// classify nav List
+.proNavList{ margin-bottom: 300px;
+  >ul{
+    >li{ font-size: $font15; color: $colorBlack; margin-bottom: 25px; cursor: pointer;
+      span{ display: inline-block; width: 12px; height: 12px; @include bgImg("common/proNavArrow.png", auto 100%); background-position: 100% 0; margin-left: 3%;}
+      // sub menu
+      .subList{ display: block; @extend %flowHidden;
+        li{ @include aColor($colorBlack3); border-bottom: 1px solid $colorGray; width: 66%; font-size: 93%;
+          &:hover{ @include aColor($colorPink17);}
+          a{ display: block; padding: 10px 0 10px 5.7%;}
+        }
+      }
+      &.open{ color: $colorPink2; margin-bottom: 25px;
+        span{ background-position: 0 0;}
+        .subList{ display: block; margin-top: 15px;}
+      }
+    }
+  }
+}
+.proNavListHoverSpe>ul>li:hover{ color: $colorPink17;}
+
+// top list
+.topList{ width: 74.2%;
+  >img{ width: 100%; height: auto; margin-bottom: 20px;}
+  .topImgArea{ position: relative; margin-bottom: 15px;
+    img{ width: auto; height: 100%;}
+    .topNum{ @include bgImg("common/topNum.png", 100% auto); width: 24px; position: absolute; height: 34px; left: 4%; bottom: 0;}
+    .top3Num{ @include bgImg("common/top3Num.png", 100% auto); width: 74px; position: absolute; height: 112px; left: 4%; bottom: 14%;}
+  }
+  &.top3List{ width: 100%; margin-top: 35px;
+    .topImgArea{ @include bgImg("common/top3bg.png", 100% auto, transparent, no-repeat, left, 62%); margin-bottom: 0;
+      img{ width: 100%; height: auto;}
+    }
+  }
+  .top3ListInfo{ margin-top: 0;
+    ul{ overflow: hidden; padding-top: 50px;
+      li{ margin-bottom: 25px;
+        a{ display: block;}
+      }
+    }
+  }
+  .topListInfo{
+    ul{
+      li{
+        &:nth-of-type(2) .topNum{ background-position: 0 25%;}
+        &:nth-of-type(2) .top3Num{ background-position: 0 50%;}
+        &:nth-of-type(3) .topNum{ background-position: 0 50%;}
+        &:nth-of-type(3) .top3Num{ background-position: 0 100%;}
+        &:nth-of-type(4) .topNum{ background-position: 0 75%;}
+        &:nth-of-type(5) .topNum{ background-position: 0 100%;}
+      }
+    }
+  }
+  .top3List-title{ position: relative; width: 88%; left: 6%; margin-bottom: 20px; text-align: center; font-size: $font24; color: $colorPink7;
+    .italic{ font-style: italic;}
+    .top3List-title-num{ font-size: 165%; margin-right: 3%; color: $colorPink2; font-weight: 600;}
+    .top3List-title-content{ font-size: 90%;}
+  }
+}
+
+// product include small title
+.contentSmallTitle{ color: $colorBlack; font-size: $font14; margin-bottom: 0;}
+
+// product include images
+.proIntroLeft{ padding-right: 2.45%;}
+.proInclude{ padding-left: 1.2%;}
+.proImges{
+  ul{ @extend %flowHidden; padding-top: 15px;
+    li{ @extend %floatLeft; width: 70px; text-align: center; margin: 0 0 10px 2.6%; position: relative;
+      &:nth-of-type(1){ margin-left: 0;}
+      .img{ height: 77px; padding: 7px 0; border: solid 1px $colorGray; margin-bottom: 6px;
+        img{ height: 100%; width: auto;}
+      }
+    }
+  }
+}
+.proIn-tag{ position: absolute; color: #fff; background-color: $colorPink2; width: 25px; height: 25px; @include border-radius(50%); line-height: 26px;
+  text-align: center; font-size: $font14; top: -7px; right: -7px;}
+
+// product include title
+.proInTitle{ font-size: $font10; color: $colorBlack; text-align: left; padding-left: 6.5%; line-height: 1.5;}
+.proInCapacity{ @extend .proInTitle;}
+
+
+// product introduce right
+.proIntroRight{ border: 1px solid $colorGray2;
+  h1{ margin-bottom: 12px; font-size: 150%;}
+}
+
+.proIntroBottomBorder{ border-bottom: 1px solid $colorGray2;}
+
+// sale tag
+.saleTagArea{ margin-bottom: 5px;
+  .saleTag{ color: #fff; background-color: $colorPink4; font-size: $font18; padding: 0 1.9%; display: inline-block; line-height: 1.5;margin: 0 0 10px 2.5%;
+    &:nth-of-type(1){ margin-left: 0;}
+  }
+  img{ height: 24px; width: auto; margin: 0 11px 5px 0;}
+}
+
+.proIntroRightPadding{ padding-left: 10%;}
+
+.proIntroDetail{ margin-bottom: 37px;}
+
+.monthSale{ margin-bottom: 20px;
+  span{ font-size: $font36; color: #000;}
+}
+
+.proNum{ font-size: $font14; margin-bottom: 20px;}
+.proIntroDetailContent{ font-size: $font15; line-height: 1.7; margin-bottom: 20px;}
+
+.price{ margin-bottom: 20px; padding-bottom: 20px;}
+
+.oriPrice{ font-size: $font12; margin-bottom: 8px; text-decoration: line-through;}
+.nowPrice{ display: inline-block; font-size: $font24; padding-top: 5px; @extend %verMiddle; margin-right: 5.4%; width: 57%;}
+
+// buy info
+.buyInfo{ margin-bottom: 20px;}
+.amount{ display: inline-block; width: 25%;
+  label, select{ font-size: $font14; @extend %verMiddle; background: transparent;}
+  label{ margin-right: 1%;}
+}
+
+// cart img
+.cartImg{ @include bgImg("common/cartWhiteImg.png", 100% auto); display: inline-block; width: 24px; height: 19px; vertical-align: bottom; margin-right: 3%;}
+
+// pro-intro-activityText
+.pro-intro-activityText{ font-size: $full; cursor: pointer; margin: 10px 0;display: inline-block; @include aColor($colorRed); text-align: center;
+    border-bottom: 1px solid $colorRed; padding-bottom: 2px;
+}
+.arrowRight{ width: 0; height: 0; border-style: solid; border-color: transparent transparent transparent red; border-width: 7px 10px;
+  vertical-align: top; display: inline-block;}
+
+// gift Area
+.giftArea{ padding-top: 33px; position: relative;
+  ul{ margin: 25px 0 45px;
+    li{ line-height: 2; font-size: $font14;}
+  }
+  .giftAbsolute{ position: absolute; left: 10%;}
+  >span{ background-color: #fff; z-index: 5; top: 33px; width: 50px;;}
+  .line{ height: 1px; background-color: $colorGray2; width: 100%; top: 40px;}
+}
+
+// gift tag
+.giftTag{ background-color: $colorPink4; font-size: $font12; color: #fff; padding: 2px 2%; margin-right: 1%;}
+
+// bottom element
+.bottomElement{ margin-bottom: 150px;}
+
+// 全館鋪底
+.saleImgArea{ margin-bottom: 70px;
+  a, img{ width: 100%; height: auto;}
+}
+
+// m prointroduce info
+.mProIntroduceInfo{ text-align: center; margin-top: 6.25vw; position: relative;
+  h1{ padding: 1.5vw 0; margin-bottom: 2.5vw; font-size: 150%;}
+}
+.mProIntroImg{ padding: 5.3vw 0; border: solid $colorGray2; border-width: 1px 0;
+  img{ width: 50.3125%; height: auto;}
+}
+
+.mProIntroDetail{ text-align: left; padding: 0 13.4375%; @extend %flowHidden; margin-bottom: 7vw;}
+
+//---member login---
+.memberLogin{ overflow: hidden; display: none; width: 768px; position: fixed; height: 320px;
+  border: 1px solid $colorGray2; z-index: 999; padding: 50px 56.3px 42px; background-color: #fff;
+  >div{ float: left;}
+  .xBtn{ top: 11px; right: 2.4%;}
+}
+
+//---popup animation---
+.popup-animate{
+  transform: scale(0); animation-name: popup; animation-duration: 0.6s; animation-fill-mode: forwards;
+  -webkit-animation-name: popup; -webkit-animation-duration: 0.6s; -webkit-animation-fill-mode: forwards; -moz-animation-name: popup;
+  -moz-animation-duration: 0.6s; -moz-animation-fill-mode: forwards;
+}
+
+// border top spe
+.borderTopSpe{ border-top: 3px solid $colorPink2;
+  &:after{ content: ''; height: 1px; width: 134%; background-color: $colorPink4; display: block; position: relative; top: -50px; left: -17%;}
+}
+
+.loginRegisterBtn{ margin-bottom: 18px;}
+.login{ padding-right: 34px; width: 55.5%; border-right: 1px solid $colorBlack3;
+  .btnPurple, .btnGray{ padding: 6px 5%;}
+}
+.firstBuy{ padding-left: 34px; width: 44.5%;
+  &.firstBuy-noPro{
+    .firstBuyContent:not(.firstBuyContent-noPro), .btn{ display: none;}
+    .firstBuyContent-noPro{ display: block;;}
+  }
+}
+.memLoginTitle{ font-size: $font24; color: $colorBlack3; text-align: center; border-bottom: 1px solid $colorBlack3; padding-bottom: 15px; margin-bottom: 24px;}
+
+// social login
+.socilLogin{ @include aColor($colorBlack2);
+  >span{ font-size: $font13; vertical-align: super;}
+  >a{ border: 1px solid $colorGray3; height: 25px; width: 35%; font-size: $font11; @extend %inline-block; position: relative; cursor: pointer;
+    &.socialLoginYahoo{ width: 32%;
+      .socialWord{ left: 45px;}
+    }
+  }
+}
+.socialWord{ position: absolute; top: 7px; left: 37px;}
+// fb btn
+.fbBtn, .yahooBtn{ @extend %inline-block;}
+.fbBtn{ height: 100%; width: 28px; @include bgImg("common/mfb.png", 35% auto, $colorFb, no-repeat, 50%, 50%);}
+// yahoo btn
+.yahooBtn{ height: 100%; width: 28px; @include bgImg("common/myahoo.png", 40% auto, $colorYahoo, no-repeat, 50%, 50%);}
+
+// first buy
+.firstBuyContent{ font-size: $font15; color: $colorBlack3; line-height: 1.7; margin-bottom: 53px;
+  &.firstBuyContent-noPro{ color: $colorRed; display: none;}
+}
+
+//---static information---
+.staticInfo{ padding: 36px 18% 36px 22.5%; margin: 0 auto; width: 91%; border: 1px solid $colorGray;
+  &.staticInfo-noBread{ margin-top: 30px;}
+}
+.staticInfo-title{ font-size: $font24; color: $colorPink2; margin-bottom: 12px;}
+.staticInfo-content{ color: $colorBlack3; line-height: 2; font-size: $full; padding-right: 2%;
+  span{ color: $colorBlack;}
+  &.staticInfo-content-noBttom{ margin-bottom: 0;}
+}
+.staticInfo-inputBtn{ padding: 36px 18% 36px 22.5%; margin: 0 auto; width: 91%; height: 40px;
+  label, .btn{ @extend %inline-block; vertical-align: top; height: 100%;}
+  label{ width: 68%; margin-right: 4%;}
+  .btn{ width: 27%; font-size: $font18; background-color: $colorPink5; border: none; line-height: 40px; height: 40px;}
+  &.staticInfo-btnOnly{
+    .btn{ width: 68%; margin-left: 16%;}
+  }
+}
+.staticInfo-inputBtn-forgetPassword{ padding: 0; margin-top: 36px; height: auto;
+  label{ height: 40px;}
+  //---password modify---
+  .passwordModify-column{ margin-bottom: 2%; text-align: left; color: $colorBlack3;
+    &:nth-last-of-type(2){ margin-bottom: 5%;}
+    label{ height: 29px; margin-left: 2%; vertical-align: baseline;}
+    .listStyle.listStyle-form{ margin-right: 2%;}
+  }
+}
+.staticInfo-inputBtn-passwordModify{ text-align: center;}
+.gift-success-btn{ padding: 36px 0;}
+
+// content width padding
+.contentPadding{ padding: 0 4.58%;}
+// words and member center banner
+.memberCenter-banner, .words{ color: $colorBlack3; font-size: $full; margin: 0 0 40px; line-height: 1.7;}
+
+//---member center---
+.memberCenter-memberInfo{ @include borderBottomStyle($colorBlack); padding: 20px 6%; @extend %flowHidden; color: $colorBlack3; margin-bottom: 80px;}
+.memberCenter-memberInfoLeft, .memberCenter-memberInfoRight{ @extend %floatLeft; vertical-align: middle; width: 51.2%;}
+.memberCenter-memberInfoRight{ width: 48.8%;}
+// member info right
+.memberCenter-memberInfoRight, .memberCenter-banner{
+  a, img{ width: 100%; height: auto;}
+}
+
+// list style of purple circle
+.listStyle{ display: inline-block; width: 4px; height: 4px; @include border-radius(50%); @extend %verMiddle; margin-right: 2%;
+  &.listStyle-large{ width: 6px; height: 6px;}
+  &.listStyle-form{ margin-right: 9%;}
+  &.listStyle-purpleCircle{ background-color: $colorPink2;}
+  &.listStyle-pinkCircle{ background-color: $colorPink4;}
+  &.listStyle-whiteCircle{ background-color: #fff;}
+  &.listStyle-rightSmall{ margin-right: 1%;}
+}
+.purpleTitle{ color: $colorPink2; @extend %verMiddle;}
+.memberInfo-wordSmaller{ font-size: $font14;}
+
+// letter space
+.letterSpace{ letter-spacing: 0.37em;}
+
+// member info left
+.memberCenter-memberInfoLeft{
+  ul li{ line-height: 1.8;}
+  .btn{ font-size: $font10; padding: 0 3.5%; position: relative; bottom: 2px;}
+}
+.memberInfo-right-posiSpe .btn{ bottom: 3px;}
+.memberInfo-name{ color: $colorBlack2; margin-bottom: 25px;}
+.memberInfo-right, .memberInfo-left{ @extend %inline-block; vertical-align: middle;}
+.memberInfo-right{ width: 60%;}
+.memberInfo-left{ width: 15%;}
+
+//---member center map
+ .memberMap-title{ color: $colorBlack; font-size: $font20; padding: 10px 0; border: $colorGray 1px solid; line-height: 1; margin: 0 auto 20px;}
+.memberCenter-map{ text-align: center;
+  ul{ @include aColor($colorBlack3); text-align: center;
+    li{ line-height: 2.5; padding: 0 1.5%;}
+  }
+}
+
+//---noticeArea---
+.noticeArea{ background-color: $colorBlack3; text-align: left; font-size: $full; color: #fff; padding: 25px 3.75%; line-height: 1.7; margin-bottom: 50px;
+  .radioBox{ float: none; display: inline-block; min-width: 9%;
+    .chkRadio.radioImg, .chkRadio.radioImgWhite{ margin-right: 5%;}
+  }
+  .noticeArea-content{ display: inline-block; width: 95%; vertical-align: top;}
+}
+
+// pink slash
+.pinkSlash{ width: 16px; height: 22px; vertical-align: middle; display: inline-block; @include bgImg("common/pinkSlash.png"); margin-left: 0.5%;}
+
+//---index banner area---
+.table.table-indexBanner{ margin-top: 35px; @extend %flowHidden; width: 100%;
+  .td{ @extend %floatLeft; padding-bottom: 20px;
+    &:nth-of-type(1){ width: 61%; margin-right: 1.9%;}
+    &:nth-of-type(2){ width: 37.1%;}
+    img{ width: 100%; height: auto;}
+  }
+}
+
+.activityBanner{ @extend %flowHidden; width: 100%; margin-bottom: 30px;
+  >div{ max-height: 180px; @extend %floatLeft; margin-left: 1.25%;
+    &:nth-of-type(1){ margin-left: 0;}
+    img{ width: 100%; height: auto; max-height: 100%;}
+  }
+  .activityBanner-small{ width: 25%;}
+  .activityBanner-middle{ width: 27.5%;}
+  .activityBanner-large{ width: 45%;}
+}
+
+//---index product limited sale time---
+.proInfoList-limited-timeArea{ text-align: center; margin: 35px 0;}
+.proInfoList-limited-timeTitle{ color: $colorPink2; font-size: $font3115; margin-bottom: 15px;}
+.proInfoList-limited-time{ font-size: $font15; color: $colorBlack3; text-align: center;
+  >div{ @extend %inline-block;
+    span{ color: $colorBlack;@extend %inline-block; font-size: 273%; border: 1px solid $colorGray2; padding: 10px 15px; vertical-align: super;}
+  }
+}
+
+//---video popup
+.videoPopup{ position: fixed; top: 0; left: 0; width: 100%; height: 100vh; max-width: $maxWidth; min-width:$min-width; z-index: 920;
+  .videoPopup-area{ width: 73.5%; background-color: #fff; position: absolute; text-align: center; padding-top: 1.5%;}
+  .videoPopup-close{ position: absolute; bottom: 1.75%; right: 2%; font-size: $full; color: $colorBlack3; width: 100%; text-align: right; cursor: pointer;}
+  .xBtn{ @extend %inline-block; position: static; vertical-align: bottom; margin-left: 8px;}
+}
+
+//---set middle---
+.rightMiddle{ top: 0; left: 0; right: 0; bottom: 0; margin: auto;}
+
+//---cms---
+.cms{ padding: 0 4.5%;
+  &.cms-hasBottom{ margin-bottom: 55px;}
+  img{ max-width: 100%;}
+}
+
+//---a color pink---
+.a-color-pink{ color: $colorPink9; text-decoration: underline;
+  &:visited, &:active{ color: $colorPink9;}
+}
+
+//---page---
+.page{ text-align: center; font-size: $full; @include aColor($colorGray3); margin-bottom: 35px;
+  a{ font-weight: 100;}
+  div{ display: inline-block; padding: 0 1%;
+    .click{ border-bottom: 1px solid;}
+  }
+}
+
+//---popup message---
+.popupMessage{ width: 401px; height: 200px; position: fixed; padding: 5px 5px 30px; background-color: #fff; text-align: center; display: none; z-index: 920;
+  .popupMessage-title{ color: $colorPink2; background-color: $colorPink8; font-size: $font20; padding: 5px 0; position: relative;
+    margin-bottom: 34px;
+    .xBtn{ top: 7px; right: 8px;}
+  }
+  p{ padding: 0 50px; font-size: $font15; color: $colorBlack; height: 45px; margin-bottom: 25px; line-height: 1.7;}
+  .btn{ display: inline-block; width: 120px; height: 30px; line-height: 30px;}
+  .btnGrayLight{ margin-right: 5px;}
+}
+
+//---hr---
+hr{ width: 100%; height: 1px; background-color: $colorBlack; border-bottom: 1px solid $colorGray; margin-bottom: 15px;}
+
+//---justify---
+.justify{ text-align: justify; text-justify: inter-ideograph; -ms-text-justify: inter-ideograph; /*IE9*/ -moz-text-align-last:justify; /*Firefox*/
+  -webkit-text-align-last:justify; /*Chrome*/
+  &:after { content: ''; display: inline-block; width: 100%;}
+}
+
+//---bonus info---
+.bonus-basicInfo{ color: $colorBlack3; font-size: $font18; font-weight: 100; padding: 0 4.75%; line-height: 1.5; margin: 70px 0 40px;
+  .bonus-basicInfo-title{ color: $colorPink2;}
+  .bonus-basicInfo-name{ margin-bottom: 10px;}
+}
+
+//---gift area---
+.gift-area{ padding: 0 4.5%; color: $colorBlack3;}
+.gift-name{ font-size: $font14; margin: 0 0 15px;}
+.gift-name-red{ color: $colorRed;}
+.gift-banner{ text-align: center; height: 480px; background-color: $colorGray4; position: relative; margin-bottom: 44px;}
+.gift-banner-content{ position: absolute; width: 590px; height: 322px;
+  .gift-banner-bigTitle{ font-size: $font90; color: #fff; margin-bottom: 106px;
+    .gift-banner-lightpink{ color: $colorPink10;}
+  }
+  .gift-title{ color: $colorPink9; font-size: $font28; margin-bottom: 20px;}
+  p{ font-size: $full; color: $colorBlack; line-height: 1.7;}
+}
+.gift-arrowDown{ text-align: center; margin-bottom: 15px;
+  img{ width: 16px; height: auto;}
+}
+.gift-step{ font-size: $font36; color: $colorPink2; position: relative; text-align: center; margin-bottom: 90px;
+  span{ width: 19px; height: 45px; @include bgImg("gift/slash.png", 100% auto); display: inline-block; vertical-align: bottom;
+    &:nth-of-type(1){ margin-right: 22px;}
+    &:nth-of-type(2){ margin-left: 22px;}
+  }
+  .gift-step-line{ color: $colorPink8;}
+  .gift-step-line{ width: 31.4%; height: 2px; background-color: $colorPink8; border-bottom: 1px solid #faf6f8; position: absolute; top: 50%;}
+  .gift-step-lineLeft{ left: 0;}
+  .gift-step-lineRight{ right: 0;}
+}
+// step2
+.gift-area-notice{ font-size: $font24; color: $colorBlack2; margin-bottom: 25px;
+  span{ color: $colorPink2; font-size: 200%;}
+}
+.gift-area-form{ border: 1px solid $colorGray; @extend %flowHidden; padding: 57px 1.6% 15px; position: relative; margin-bottom: 20px;
+  .xBtn{ right: 8px; top: 12px;}
+}
+.gift-form-pro, .gift-form-input{ @extend %floatLeft; width: 50%;}
+// product info
+.gift-form-pro{ @extend %flowHidden;
+  .gift-form-proImg, .gift-form-proIntro{ @extend %floatLeft; width: 60%;}
+  .gift-form-proIntro{ padding-left: 2%;}
+  .gift-form-proImg{ width: 40%; height: 140px; text-align: center; margin-bottom: 15px;
+    img{ height: 100%; width: auto;}
+  }
+  // title
+  .gift-from-proTitle{ font-size: $font24; color: $colorPink2; margin-bottom: 20px;}
+  // content
+  .gift-form-proContent{ font-size: $font14; color: $colorBlack3; line-height: 1.5;
+    .gift-form-price{ color: $colorPink9; margin-top: 12px;}
+  }
+  // product select
+  .selectLabel{ width: 100%; @extend %floatLeft; font-size: $full;
+    select{ font-size: 87.5%;}
+  }
+}
+// gift form input
+.gift-form-input{ padding-right: 1.56%; @extend %flowHidden;
+  .table{
+    .td{ font-size: $full; vertical-align: middle; padding-bottom: 5px;}
+    .tr.m{ display: none;}
+    .tr-gift-radioBox{ @extend %flowHidden;
+      .gift-radioBox-area, label{ @extend %floatLeft; width: 45%;}
+      label{ width: 55%;}
+      .gift-radioBox-area{ padding-left: 5%; line-height: 1.7;}
+      .radioBox-smallWidth{ width: 50%;}
+    }
+    label{ width: 55%; font-size: $full;
+      select{ font-size: 83.5%;}
+      &.inputStyle-address{ width: 100%;}
+    }
+  }
+}
+// gift btn
+.btn-gift-area{ text-align: left; padding: 0 4.5%; margin: 25px 0 75px;}
+.btn.btn-gift{ font-size: $full; width: 150px; height: 35px; display: inline-block; line-height: 35px;}
+
+//---cart---
+// step
+.cart-step{ margin-bottom: 38px;
+  ul{ @extend %flowHidden;
+    li{ @extend %floatLeft; width: 25%; text-align: center; font-size: $font18; color: $colorBlack3; font-weight: lighter; border-bottom: 1px solid $colorBlack3;
+      position: relative;
+      &.cart-step-now{ color: $colorPink9;}
+      .cart-step-slash{ width: 28px; height: 28px; @include bgImg("cart/slash2.png", 100% auto); @extend %floatLeft; margin-top: 13px;
+        &.cart-step-slashHidden{ visibility: hidden;}
+      }
+      span{ font-size: 200%; margin-right: 15px;}
+    }
+  }
+}
+.cart-line{ width: 100%; height: 1px; background-color: $colorGray2; position: absolute; bottom: 0; left: 0;}
+// freight
+.cart-freight{ @extend %flowHidden; padding-left: 5%;
+  .selectLabel{ vertical-align: text-top; font-size: $font1557;
+    &:nth-of-type(1){ margin-left: 2%;}
+  }
+  .chkRadio.radioImg, .chkRadio.radioImgWhite{ margin-right: 3%;}
+  .radioBox:nth-of-type(1){ min-width: 10%; margin-top: 0.8%;
+    .chkRadio.radioImg, .chkRadio.radioImgWhite{ margin-right: 8%;}
+  }
+}
+// amount
+.cart-amountArea{ @extend %flowHidden; color: $colorPink9; line-height: 1.5; position: relative; border-bottom: 1px solid $colorBlack3; padding-bottom: 15px;
+  margin-bottom: 20px;
+  // discount and calculate
+  >div{ @extend %floatLeft;}
+  .cart-discount-gray, input{ color: $colorBlack;}
+  &.cart-amountArea-noAmountCal{
+    .cart-cal-bubble{ display: none;}
+    .cart-cal-show{ margin-left: 48%;}
+  }
+}
+// discount
+.cart-amount-discountSelect{ width: 33%; font-size: $font15; padding-right: 20px;
+  >div{ @extend %flowHidden; position: relative;
+  &:nth-of-type(1){ margin-bottom: 14px; padding-bottom: 15px; border-bottom: 1px solid $colorGray;}
+    >div{ @extend %floatLeft;}
+  }
+}
+.cart-discount-text{ width: 78%; padding-left: 10%;
+  .inputStyle{ margin: 5px 0 0;}
+}
+.cart-amount-btn{ width: 22%; position: absolute; height: 100%; top: 0; right: 0;
+  .btn{ border: none; width: 38px; height: 29px; line-height: 29px; font-size: $font12; position: absolute; bottom: 25%;
+    &.btn-rightBottom{ bottom: -26px;}
+    &.btnPink{ color: $colorBlack;}
+  }
+}
+.cart-amount-cal{ width: 67%; @extend %flowHidden;
+  >div{ @extend %floatLeft;}
+}
+// cart2 delete address
+.cart-commonaddress{ width: 80%; display: inline-block; margin-right: 2%;}
+.deleteAddress{ display: inline-block; color: #fff; background-color: $colorGray3; cursor: pointer; padding: 0 2%; font-size: $font13; @include border-radius(7px);
+  height: 30px; line-height: 30px;}
+// bubble
+.cart-cal-bubble{ background-color: $colorPink8; border: 1px solid $colorPink5; width: 46%; padding: 25px 0 25px 2%; margin: 3.1% 4% 0 0; position: relative;
+  &:before { content: ""; position: absolute; right: -4.7%; top : 45%; width: 4.7%; height: 13px; background: url("../images/cart/bubbleArrow.png") no-repeat;
+   background-size: 100% auto;}
+}
+.cart-bubble-area{ font-size: $font17;
+  >div{ display: inline-block;
+    span{ font-size: 122%;}
+    &:nth-of-type(2){ color: $colorBlack;}
+  }
+}
+// show
+.cart-cal-show{ font-size: $full; width: 50%; color: $colorBlack2; text-align: right;
+  ul{ width: 100%;}
+  li{ border-bottom: 1px solid $colorGray; @extend %flowHidden;
+    >div{ @extend %floatLeft; margin-top: 2.5%;
+      &:nth-of-type(1){ width: 43%; min-height: 1px; text-align: left; color: $colorPink2;}
+      &:nth-of-type(2){ width: 30%; margin-bottom: -5%;}
+      &:nth-of-type(3){ width: 27%;}
+    }
+    &:nth-last-of-type(1){ border: none;}
+  }
+}
+// total
+.cart-total{ font-size: $font22; color: $colorBlack2; text-align: right; margin-bottom: 80px;
+  .cart-total-pink{ color: $colorPink9;}
+  span:nth-last-of-type(1){ font-size: 80%;
+    >span{ font-size: 170%;}
+  }
+}
+// cart4
+.cart4-amountArea{
+  .cart-amount-cal{ width: 200px; float: right; margin-right: 5%;}
+  .cart-cal-show{ width: 100%;
+    li>div{ margin-top: 5.5%;
+      &:nth-of-type(1){ width: 50%; text-align: right; color: $colorBlack2; margin-bottom: -8%;}
+      &:nth-of-type(2){ width: 50%; margin-bottom: 0;}
+    }
+  }
+}
+.cart4-total{ padding-right: 4.5%; margin-bottom: 30px;}
+.cart4-info{ color: $colorBlack3; line-height: 1.8; padding: 0 4.75%;}
+.cart4-info-customer{ font-size: $full; padding: 0 3.6%; margin-bottom: 25px;
+  .order-num{ color: $colorPink2;}
+}
+.cart4-info-finishText{ font-size: 163%; color: $colorPink2; margin-bottom: 5px;}
+.cart4-info-order{ @extend %flowHidden; border: 1px solid $colorGray; padding: 0 2% 0 3.6%; position: relative;
+  hr{ position: absolute; left: 0; bottom: -16px; width: 100%;}
+}
+.cart4-info-orderLeft, .cart4-info-orderRight, .cart4-orderLeft-store, .cart4-orderLeft-text{ @extend %floatLeft;}
+// left
+.cart4-info-orderLeft{ width: 65%; padding: 56px 0; line-height: 2;}
+.cart4-orderLeft-text{ font-size: $full;
+  .cart4-text-larger{ font-size: $font19;}
+}
+.cart4-orderLeft-store{ width: 54%; padding-left: 6%; line-height: 2.2;
+  li{
+    div{ display: inline-block;
+      &:nth-of-type(1){ width: 85px;}
+      &:nth-of-type(2){ min-width: 188px;}
+    }
+  }
+}
+.cart4-orderLeft-text{ width: 45%}
+// right
+.cart4-info-orderRight{ width: 35%; text-align: center; padding: 20px 0 47px 2.5%; border-left: 1px solid $colorGray;
+  img{ width: 100%; height: auto; margin-bottom: 68px;}
+  .cart4-orderRight-text{ width: 265px; margin: 0 auto; text-align: left;}
+}
+.btn-cart4{ margin-bottom: 50px;}
+// notice
+.cart4-notice{ margin-top: 40px; border: 1px solid $colorGray; font-size: $font14; color: $colorBlack3; padding: 30px 3.75%; line-height: 1.7;}
+.cart4-notice{}
+// cart product list
+.proInfoList.proInfoListSub.cart-proList ul li{
+  .selectLabel{ margin-right: 5px;}
+  .btnPurple.btn{ width: 60px; height: 30px; vertical-align: bottom; padding: 8px 2.5%;}
+  .cartImg{ width: 16px; height: 13px;}
+  .addImg{ @include bgImg("common/amountBtnImg.png", 100% auto); width: 9px; height: 9px; display: inline-block; background-position: 0 100%; margin-right: 15%;}
+  .proSaleInfo{ margin-bottom: 0;}
+  .procapacity{ margin-bottom: 7px;}
+}
+// transaction fail
+.transactionFail{ font-size: $font15; color: $colorBlack; margin-bottom: 30px; line-height: 1.7; padding-left: 7.8%;}
+.transactionFail-big{ display: block; font-size: 163%; color: $colorPink2; margin-bottom: 15px; line-height: 1;}
+// cart3
+form.form-borderBottom.cart3-form{ padding-bottom: 0; margin-bottom: 50px;
+  .form-title.form-title-noBorder{ margin-bottom: 0;}
+}
+// abroad mask
+.cart3-abroadMask{ width: 100%; height: 100%; background-color: rgba(255,255,255,0.8); top: 0; left: 0; position: absolute; display: none;}
+.cart3-list{
+  ul{ @extend %flowHidden;}
+  li{ border-left: 1px solid $colorGray; padding: 40px 0; position: relative;
+    &:nth-of-type(1){ border-left-width: 0;}
+    &:nth-of-type(2){
+      .cart3-img .rightMiddle{ background-position: 0 50%;}
+    }
+    &:nth-of-type(3){
+      .cart3-img .rightMiddle{ background-position: 0 100%;}
+    }
+  }
+}
+.cart3-img{ width: 87.5%; height: 158px; text-align: center; margin: 0 auto 70px; border: 1px dashed $colorGray3; position: relative;
+  .rightMiddle{ width: 190px; height: 77px; @include bgImg("cart/cart3.png", 100% auto); display: inline-block; position: absolute;}
+}
+.cart3-payment{ font-size: $font24; color: $colorBlack3; width: 70%; height: 30px; position: absolute; bottom: -15px; background-color: #fff; left: 15%;
+  .chkRadio{ width: 15px; height: 15px; margin-right: 8%;}
+  .radioBox{ width: 100%;}
+}
+.cart3-notice{ font-size: $font15; color: $colorBlack3; text-align: center; line-height: 1.8; margin-bottom: 20px;}
+.cart3-payment-img{ text-align: center;
+  img{ width: auto; height: 33px; margin-left: 10px;
+    &:nth-of-type(1){ margin-left: 0;}
+  }
+}
+
+//---btn cart add---
+.btn-cartAdd.btn{ width: 60px; height: 25px; vertical-align: bottom; padding: 6px 2.5%;
+  .cartImg{ width: 16px; height: 13px;}
+  .addImg{ @include bgImg("common/amountBtnImg.png", 100% auto); width: 9px; height: 9px; display: inline-block; background-position: 0 100%; margin-right: 15%;}
+}
+
+//---search result---
+.result-text{ font-size: $full; margin: 5px 0 20px;
+  h1{ font-size: $full; line-height: 1; display: inline;}
+}
+
+//---open hide arrow---
+.openHideArrow{ display: inline-block; width: 12px; height: 12px; @include bgImg("common/proNavArrow.png", auto 100%); background-position: 100% 0; margin-left: 3%;}

@@ -1,0 +1,52 @@
+@import "compass/css3";
+@import "variable";
+
+// Safari 5
+@media only screen and (-webkit-min-device-pixel-ratio: 1) and (max-width: 767px){
+  ::i-block-chrome, .btn-ask .ask-unread{ line-height: 5.5vw;}
+  ::i-block-chrome, header .mHeadTop #cartImg .cartNum{ line-height: 1.4;}
+  ::i-block-chrome, .table1of2.table-haslistStyle .td-hasRadioBoxSelect .selectLabel{ margin-left: 0;}
+}
+
+// Safari 6.1-7.0
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0) and (max-width: 767px)
+{
+  .btn-ask .ask-unread{ line-height: 5.5vw;}
+  header .mHeadTop #cartImg .cartNum{ line-height: 1.4;}
+  .table1of2.table-haslistStyle .td-hasRadioBoxSelect .selectLabel{ margin-left: 0;}
+}
+
+// Safari 7.1+ (8.0 is the latest version of Safari at this time)
+_::-webkit-full-page-media, _:future, :root .safari_only {
+  @media all and (max-width: 767px){
+    .btn-ask .ask-unread{ line-height: 5.5vw;}
+    header .mHeadTop #cartImg .cartNum{ line-height: 1.4;}
+    .table1of2.table-haslistStyle .td-hasRadioBoxSelect .selectLabel{ margin-left: 0;}
+  }
+}
+
+// chrome
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) and (max-width: 767px){
+  .btn-ask .ask-unread{ line-height: 6vw;}
+  header .mHeadTop #cartImg .cartNum{ line-height: 1.7;}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) and (min-width: 768px){
+  header .pcHeadRight nav > ul:not(.hoverList) > li{ padding-bottom: 11px;}
+  header .pcHeadRight nav.scrollFix > ul:not(.hoverList) > li{ padding-bottom: 12px;}
+}
+
+// firefox
+@-moz-document url-prefix(){
+  @media all and (max-width: 767px){
+    .praiseList-big-img img{ top: -9%;}
+  }
+  @media all and (min-width: 768px){
+    .cart-freight .radioBox:nth-of-type(1){ margin-top: 0.97%;}
+    .form.form-cart .td-indent-invoice2 .chkRadioBtn .chkRadio{ margin-top: 3.4%;}
+    header .pcHeadRight #topNav li .tNavImg{ vertical-align: bottom;}
+    header .pcHeadRight #topNav li .cartNum{ line-height: 14px; bottom: 2px;}
+    header .pcHeadRight nav > ul:not(.hoverList) > li{ padding-bottom: 8px;}
+    header .pcHeadRight nav.scrollFix > ul:not(.hoverList) > li{ padding-bottom: 10px;}
+  }
+}

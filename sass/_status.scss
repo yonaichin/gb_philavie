@@ -1,0 +1,14 @@
+@import "compass/css3";
+@import "variable";
+
+// header nav hover
+header .pc nav>ul>li.navOpen{ border-bottom: 5px solid $colorPink2;}
+
+// track btn
+.btn.trackBtn.trackOn{
+  span{
+    &.heart{ background-position: 0 100%;}
+    &.trackAdd{ display: inline-block;}
+    &.trackNoAdd{ display: none;}
+  }
+}

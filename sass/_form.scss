@@ -1,0 +1,492 @@
+@import "compass/css3";
+@import "variable";
+
+//---input style---
+.inputStyle{ width: $full; height: 29px; margin-bottom: 8px; display: block;
+  input{ width: $full; height: $full; font-size: $full; padding-left: 3.5%; color: $colorBlack; border: 1px solid $colorGray5;}
+  &.verify{ @extend %floatLeft; width: 56%; margin-right: 4.5%;
+    input{ padding-left: 10.7%;}
+  }
+}
+.inputStyle-marTop{ margin-top: 10px;}
+
+label{ vertical-align: middle;}
+
+//---verify code---
+.verifyCode{ display: inline-block; @extend %flowHidden; width: 53%;}
+// img
+.verCode{ vertical-align: middle; width: auto; height: 29px;}
+
+// chkbox and forget password
+.chkForget{ font-size: $font12; color: $colorBlack3; @include aColor($colorBlack3); @extend %flowHidden; @extend %inline-block; height: 30px; vertical-align: top;
+  padding-top: 17px; width: 45%;
+  >div{ @extend %floatLeft; width: 51%;
+    &.forgetPass{ width: 44%;}
+  }
+  .chkImg{ margin-right: 9%;}
+}
+
+//---chk radio---
+.chkRadio{ @include bgImg("common/chkRadio.png", 100% auto); width: 12px; height: 13px; display: inline-block; vertical-align: bottom;
+  &.chkRadio-middle{ vertical-align: middle;}
+  &.chkImg{ background-position: 0 57%;
+    &.click{ background-position: 0 14%;}
+  }
+  &.radioImg{ background-position: 0 71.5%;
+    &.click{ background-position: 0 28.5%;}
+  }
+  &.radioImgWhite{ background-position: 0 43%;
+    &.click{ background-position: 100% 0;}
+  }
+  &.radioImgGray{ background-position: 0 100%;
+    &.click{ background-position: 0 86%;}
+  }
+  &.radioImg, &.radioImgWhite{ vertical-align: middle; margin: 0 7% 3px 0;}
+  &.chkBox-middle{ vertical-align: baseline; margin-right: 9%;}
+}
+
+//---chkbox---
+.chkBox, .radioBox{ cursor: pointer;}
+.chkBox{
+  &.chkBox-registerLink{ text-align: center; @include aColor($colorBlack); color: $colorBlack; margin-bottom: 30px;
+    a{ text-decoration: underline;}
+    .chkRadio{ vertical-align: inherit; margin-right: 4px;}
+  }
+}
+.form-cart-chk{ color: $colorPink9;
+  .chkImg{ margin-right: 2%;}
+  &.form-cart-chkReceiver{ padding-left: 9.8%; font-size: $font14; margin-bottom: 20px;
+    .chkImg{ margin-right: 0.5%; vertical-align: top;}
+  }
+}
+
+//---radiobox---
+.radioBox{ @extend %floatLeft; min-width: 25%;}
+.radioBox-hasInput{ width: 40%;
+  &.chkBox{ display: block;}
+  .chkRadio.radioImg, .chkRadio.radioImgWhite, .chkImg{ margin-right: 3%;}
+  .inputStyle{ width: 78%; display: inline-block; vertical-align: baseline;}
+}
+.radioBox-smallWidth{ min-width: 20%;
+  .chkRadio{ margin-right: 10%;}
+}
+
+//---forget password---
+.forgetPass{ margin-left: 5%; padding-left: 5%; border-left: 1px solid $colorBlack3;}
+
+//---form---
+.form{ border: 1px solid $colorGray; @extend %flowHidden; color: $colorBlack; padding-bottom: 20px;
+  &.form-borderBottom{ border-bottom-color: $colorBlack3; border-bottom-width: 2px; margin-bottom: 30px;}
+  .inputStyle.verify input{ padding-left: 7.5%;}
+  &:not(.form-hasDataBottom){ margin-bottom: 50px;}
+  &.form-contentLongNotEqual{
+    .table{
+      &:nth-of-type(1){ width: 45%;}
+      &:nth-of-type(2){ width: 55%;}
+      &.table1of2, &.table2of2{ padding: 0 4%;}
+      &.table-column2{
+        .td:nth-of-type(2){ padding-left: 3%;}
+        &.table2of2{
+          .td:nth-of-type(1){ width: 11%;}
+          .td:nth-of-type(2){ width: 36%;
+            &:not(.td-address){
+              .inputStyle{ width: 73.5%;}
+            }
+          }
+        }
+      }
+    }
+  }
+  &.form-cart{
+    .table.table-column2{
+      .td:not(.td-colspan){
+        .radioBox{ min-width: 100%;}
+        &:nth-of-type(1){
+          .radioImgGray{ margin-right: 5%;}
+        }
+      }
+      .select-commonAddress{ width: 100%;}
+      &.table-cart-member{
+        .tr:not(.tr-hasRadioBox){
+          .td:nth-of-type(1){ padding-left: 18px;}
+        }
+        .tr-hasRadioBox{
+          .td{ vertical-align: middle;}
+          .chkRadio.chkRadio-middle{ vertical-align: baseline;}
+        }
+      }
+      .tr-invoice{ line-height: 1.9;
+        .td:nth-of-type(1){ vertical-align: top; padding-top: 7px; line-height: 1;}
+        .td:nth-of-type(2){ font-size: $font15;}
+        .radioImgGray{ margin: 0 2.5% 3px 0;}
+        .td-indent{ padding-left: 40px;}
+      }
+    }
+    .td-indent-invoice2, .td-indent-invoice2 .chkRadioBtn{ overflow: hidden;}
+    .td-indent-invoice2 .chkRadioBtn{
+      .chkRadio, .invoice-text{ float: left;}
+      .chkRadio{ margin-top: 2.97%;}
+      .invoice-text{ @include aColor($colorPink9);}
+    }
+    .invoice-notice{ color: $colorPink9; font-weight: bold; float: left; margin-bottom: 3%;}
+    .td-invoice2-info, .td-invoice3-info{ height: 0; overflow: hidden;
+      &.open{ height: auto;}
+    }
+  }
+}
+.form-title{ background-color: $colorGray2; color: #fff; text-align: center; height: 48px; line-height: 48px; border-bottom: 1px solid $colorBlack3;
+  margin-bottom: 32px; font-size: $font18;
+  &.form-title-pink{ background-color: $colorPink6; font-size: $font24;}
+  &.form-title-noBorder{ border-bottom-width: 0;}
+}
+.form-refundStyle{ border: none; padding: 0 4.75%;
+  .form-refundStyle-title{ color: $colorBlack; font-size: $full; background-color: $colorGray; width: 20.8%; height: 30px; line-height: 30px; text-align: center;
+    margin-bottom: 25px;}
+  .form-refundStyle-table{ padding-left: 7.4%; @extend %flowHidden;}
+  .form-refundStyle-tr{
+    .td{ font-size: $full; vertical-align: middle; padding-bottom: 15px;}
+  }
+  .form-refundStyle-trTextarea{
+    .td{ vertical-align: top;}
+    .form-refundStyle-tdTitle{ padding-top: 3px;}
+  }
+  .form-refundStyle-tdTitle{ font-size: $full; width: 105px;}
+  .selectLabel, .selectLabel select, input{ width: 385px; font-size: $full; height: 29px; color: $colorBlack;}
+  input{ padding-left: 7px;}
+  .selectLabel-mSmall, .selectLabel-mSmall select{ width: 90px;}
+  textarea{ width: 633px; height: 132px; border: 1px solid $colorGray5; font-size: 16px; line-height: 1.5; padding: 0 1%;}
+  .radioBox{ float: none; display: inline; margin-right: 2%;}
+  .chkRadio.radioImg, .chkRadio.radioImgWhite{ margin: 0 1% 3px 0;}
+  .form-refundStyle-trRadioWidth{
+    .radioBox{ display: inline-block; min-width: 19%; margin-bottom: 15px;}
+    .td{ vertical-align: top;}
+    .chkRadio.radioImg, .chkRadio.radioImgWhite{ margin-right: 5%;}
+  }
+}
+.form-refundStyle-tdBig{
+  .form-refundStyle-tdTitle{ width: 130px;}
+  .form-refundStyle-tr .td{ vertical-align: baseline; padding-bottom: 15px;
+    &.justify{ padding-bottom: 5px;}
+  }
+  .form-refundStyle-trTdPaddingB .td{ padding-bottom: 10px;}
+  .form-refundStyle-trAddress .td{ padding-bottom: 0;}
+  .form-refundStyle-tdInput{ padding-left: 10px;}
+  .form-refundStyle-trTextarea{
+    .td{ vertical-align: top;}
+  }
+}
+.form-refundStyle-noticePink{ color: $colorPink9; @include aColor($colorPink9); font-size: $font14; margin-bottom: 15px;
+  a{ display: inline-block; border-bottom: 1px solid $colorPink9; padding-bottom: 2px;}
+}
+.form-refundStyle-noticeRed{ @extend .form-refundStyle-noticePink; color: $colorRed;}
+.table{ display: table; width: 50%; color: $colorBlack; @extend %floatLeft;
+  &.table-full{ width: 100%;}
+  &.table1of2{ padding: 0 5.6% 0 9.8%;}
+  &.table2of2{ padding: 0 9.8% 0 5.6%;}
+  &.table-column2{
+    .td:nth-of-type(1){ width: 29%;}
+    .td:nth-of-type(2){ width: 71%;}
+  }
+  &.table-column1{ width: 100%; padding: 0 3.9%; margin-bottom: 55px;
+    &:nth-last-of-type(1){ margin-bottom: 0;}
+  }
+  &.table-survey{
+    .td{ border-bottom: 1px solid $colorGray; padding: 25px 0; vertical-align: middle;
+      &:nth-of-type(1){ width: 25%; padding-left: 5%;}
+      &:nth-of-type(2){ font-size: $font15;}
+    }
+    .radioBox{ min-width: 13%; line-height: 2.2;}
+    .chkBox{ line-height: 2.2;}
+    .radioBox-biggerWidth{ min-width: 16%;
+      .chkRadio.radioImg, .chkRadio.radioImgWhite, .chkRadio.chkImg, .chkRadio.chkBox-middle{ margin-right: 5%;}
+    }
+    .radioBox-largerWidth{ min-width: 21%;
+      .chkRadio.radioImg, .chkRadio.radioImgWhite, .chkRadio.chkImg{ margin-right: 5%;}
+    }
+    .radioBox-moreLargerWidth{ min-width: 23%;}
+    .radioBox-hasInput{
+      .chkRadio.radioImg, .chkRadio.radioImgWhite, .chkImg{ margin-right: 2%;}
+    }
+  }
+  &.table-survey-full{
+    .tr-line{ display: none;}
+    .td{ border: none;
+      &.td-title{ color: $colorPink6;}
+      &:nth-of-type(1), &:nth-of-type(2){ width: 100%; padding-left: 5%; display: block; height: auto;}
+      &:nth-of-type(1){ padding-bottom: 0;}
+      .chkRadio.chkBox-middle{ margin-right: 7%;}
+      .chkBox.radioBox-hasInput .chkRadio.chkBox-middle{ margin-right: 2%;}
+      .radioBox-bigWidth{ min-width: 12%;
+        .chkRadio.radioImg, .chkRadio.radioImgWhite, .chkRadio.chkImg{ margin-right: 5%;}
+      }
+      .radioBox-biggerWidth{ min-width: 16%;
+        .chkRadio.radioImg, .chkRadio.radioImgWhite, .chkRadio.chkImg, .chkRadio.chkBox-middle{ margin-right: 4%;}
+      }
+      .radioBox-largerWidth{ min-width: 21%;
+        .chkRadio.radioImg, .chkRadio.radioImgWhite, .chkRadio.chkImg, .chkRadio.chkBox-middle{ margin-right: 3%;}
+      }
+      .radioBox-moreMoreLargerWidth{ min-width: 25%;
+        .chkRadio.radioImg, .chkRadio.radioImgWhite, .chkRadio.chkImg{ margin-right: 3%;}
+      }
+      .radioBox-moreMoreMoreLargerWidth{ min-width: 29%;
+        .chkRadio.radioImg, .chkRadio.radioImgWhite, .chkRadio.chkImg{ margin-right: 2.5%;}
+      }
+    }
+  }
+}
+.tr{ display: table-row;
+  &.table-style-th{ background-color: $colorPink8; height: 40px; line-height: 40px;}
+  &.tr-hasColspan{
+    .td{ padding-bottom: 5px;}
+  }
+}
+.form-refundStyle-address, .form-refundStyle-cash{ display: none;}
+.td{ display: table-cell; font-size: $font17; padding-bottom: 11px; vertical-align: baseline;
+  &.td-colspan{ font-size: $font12; padding-bottom: 17px;}
+  &.td-noData{ height: 23px;}
+  &.td-hasRadioBoxSelect{ @extend %flowHidden; height: 48px;}
+  &.td-smallWidth{ width: 8%;}
+  .chkBox{ display: inline-block; min-width: 9%;}
+  .form-cart-chk{
+    .chkBox{ min-width: 100%;}
+  }
+  &.td-wsmall{ width: 10%;}
+  &.td-wmiddle{ width: 21%;}
+  &.td-wbig{ width: 21%;}
+  &.td-wbigger{ width: 25%;}
+  &.td-wlarge{ width: 50%;}
+  &.td-whuge{ width: 58%;}
+  &.td-wequal{ width: 33.3%;}
+}
+
+//---select---
+.selectLabel{ font-size: $font12; margin-left: 2%;
+  select{ background: #fff; @include border-radius(0); height: 30px; font-size: $font15; border: 1px solid $colorGray5;
+    &.select-minWidth{ min-width: 14.8%;}
+  }
+  &:nth-of-type(1){ margin-left: 0;}
+}
+
+.form-title-padding{ padding: 0 3.9%; margin-bottom: 33px; font-size: $font18;}
+
+// form btn
+.formBtns{ text-align: center;
+  .btn{ font-size: $font20; height: 43px; line-height: 43px; padding-top: 0;
+    &:nth-of-type(2){ margin-left: 1%;}
+  }
+}
+
+//---required---
+.required{ color: $colorRed; vertical-align: middle;}
+
+//---table style---
+.table-style{ padding: 0 4.75%; margin-top: 44px; @extend %flowHidden;
+  // bonus
+  &.table-style-bonus{ margin-top: 20px;}
+  .table-style-1line{ @extend %flowHidden;
+    .table-style-item{ width: 37%; @extend %floatLeft; background-color: $colorPink8; height: 29px; line-height: 29px; text-align: center; margin-right: 1%;}
+    .table-style-column{ @extend %floatLeft; font-size: $full;
+      input, .table-style-item, .table-style-value{ display: inline-block; font-size: $full; padding-left: 1.5%; color: $colorBlack;}
+    }
+    .table-style-column1{ width: 41.6%;
+      .table-style-item{ width: 50%;}
+      input{ width: 49%;}
+    }
+    .table-style-column2{ width: 58.4%; padding-left: 1.25%;
+      input{ width: 84%; margin-right: 2.7%;}
+      label{ @extend %floatLeft; width: 30%;
+        &:nth-of-type(1){ width: 32%;
+          input{width: 78%;}
+        }
+      }
+    }
+  }
+  .table-style-1line-noInput{ margin-bottom: 25px;
+    .table-style-value{ height: 29px; border: 1px solid $colorGray; line-height: 29px; text-align: center;}
+    .table-style-column1{
+      .table-style-value{ width: 49%;}
+    }
+    .table-style-column2{ width: 33%;
+      .table-style-item{ width: 42%; margin-right: 1.28%;}
+      .table-style-value{ width: 56.7%;}
+    }
+    .table-style-column3{ width: 25%; padding-left: 1.25%;
+      .table-style-item{ width: 50%;  margin-right: 1.7%;}
+      .table-style-value{ width: 48%;}
+    }
+  }
+  .table-style-column6{ text-align: center; font-size: $full; color: $colorBlack;
+    &.table.table-full{ width: 100.15%;}
+    &.table-style-hasBottom{ margin-bottom: 0;}
+    .tr, .td{ font-size: $full;}
+    .td{ border: $colorGray solid; border-width: 1px 1px 0 0; padding-bottom: 0;
+      &:nth-of-type(1){ border-left-width: 1px;}
+    }
+    .tr{
+      &:nth-last-of-type(1) .td{ border-bottom-width: 1px;}
+      &:not(.table-style-th){
+        .td{ padding: 15px 0;}
+      }
+    }
+    .btn{ font-size: $font13;}
+    //---q&a table style---
+    &.table-qa{ position: relative;
+      .td-qa-middle{ width: 30%;}
+      .td-qa-big{ width: 70%;}
+      .table-qa-title{ width: 100px; height: 30px; line-height: 30px; border: 1px solid $colorGray; font-size: $full; margin: 15px 0; padding: 0 2%;}
+      .table-qa-content{ font-size: $font14; text-align: left; line-height: 1.7; margin-bottom: 25px;}
+      .tr{
+        &:not(.table-style-th){
+          .td{ padding: 0 15px;}
+        }
+      }
+      .td-rowspan{ font-size: $font18;}
+      .td-empty{ border-width: 0;}
+    }
+    &.table-qa-not1{
+      .td-rowspan{ top: 0;}
+      .tr:nth-of-type(1) .td{ border-top-width: 0;}
+    }
+    //---bounus table style---
+    &.table-bonus{  color: $colorBlack3;
+      .td-bonus{ @extend %flowHidden;
+        >div{ @extend %floatLeft; text-align: left;}
+        .td-bonus-item{ padding-left: 33%; width: 52%;}
+        .td-bonus-amount{ padding-left: 0; width: 48%;}
+      }
+    }
+    //---cart---
+    &.table-cart{
+      .tr.m, .td.m{ display: none;}
+      .table-style-th{ background-color: $colorGray3; color: #fff;}
+      .td{ border-left: none; border-right: none; vertical-align: middle; line-height: 1.5;
+        img{ width: 50%; height: auto;
+          &.cart-delete{ width: 12px; height: auto; cursor: pointer;}
+        }
+      }
+      // width
+      .td-cart-wSmall{ width: 14.6%;}
+      .td-cart-wBig{ width: 27%;}
+      .td-cart4-wSmall{ width: 17.5%;}
+      .td-cart4-wBig{ width: 30%;}
+      // product name
+      .td-cart-pro{ font-size: $font18; text-align: left;}
+      .td-cart-proNum{ font-size: 66.7%; margin-right: 10px;}
+      .td-cart-proGift{ display: block; color: $colorPink9; font-size: 73%;}
+      .td-cart-proCap{ font-size: 72%;}
+      // pro price
+      .td-cart-priceOri{ font-size: $font12; text-decoration: line-through;}
+      .td-cart-price{ font-size: $full;}
+      // amount
+      .selectLabel{ font-size: $font1557;}
+    }
+    //---browse track---
+    &.table-browseTrack{
+      .td{ vertical-align: middle;
+        >img{ width: auto; height: 80px;}
+      }
+    }
+  }
+  .td-rowspan{ position: absolute; top: 41px; bottom: 0; font-size: $font18;
+    .td-rowspan-text{ position: absolute; top: 45%; left: 0; width: 100%; text-align: center;}
+  }
+  .td-empty{ border-width: 0;}
+  // gift
+  &.table-style-gift{ margin-bottom: 120px;
+    .tr{ @extend %flowHidden;}
+    .td{ font-size: $full; padding-bottom: 20px;}
+    // img and intro area
+    .td, .td-gift-img, .td-gift-intro{ @extend %floatLeft; width: 50%;}
+    .td-gift-intro{ width: 60%; padding-right: 20px;}
+    .td-gift-img{ width: 40%; height: 195px; text-align: center; padding-top: 15px;
+      img{ height: 100%; width: auto;}
+    }
+    // price
+    .td-gift-price{ @extend %floatRight; width: 60%; text-align: right; padding-right: 6.4%;}
+    // num and title
+    .td-giftIntro-title{ width: 80%; display: inline-block; vertical-align: text-bottom; line-height: 1.3; padding-left: 3.5%;}
+    .td-giftIntro-titleSub{ font-size: $full; color: $colorBlack;}
+    .td-giftIntro-titleMain{ font-size: $font22; color: $colorPink2;
+      .td-giftIntro-titleMain-small{ font-size: 72%; vertical-align: bottom;}
+    }
+    .td-giftIntro-num{ font-size: $font72; color: $colorPink10; font-style: italic;}
+    // text
+    .td-giftIntro-text{ font-size: $full; line-height: 1.8; margin-bottom: 8px; padding-top: 20px;}
+    // price
+    .td-gift-price{ font-size: $font14; color: $colorPink2;}
+    // line
+    .tr-gift-line{
+      .td{ height: 1px; border-bottom: 1px solid $colorGray; margin-bottom: 30px;}
+    }
+  }
+}
+// table wrap
+.table-wrap{ @extend %flowHidden; margin-bottom: 35px; border: 1px solid $colorGray; border-bottom: 2px $colorBlack3 solid; color: $colorBlack; text-align: center;
+  &.table-wrap-cart4{ margin-bottom: 15px;}
+  .table-style-column6{
+    .td{ border-width: 1px 0 0 1px; padding-bottom: 0;
+      &:nth-of-type(1){ border-left-width: 0;}
+    }
+    .td-empty{ border-width: 0;}
+  }
+  // detail
+  .order-detailArea{ width: 100%; @extend %flowHidden; padding: 30px 0; line-height: 1.7;}
+  // gift detail
+  .gift-detailArea{ padding-left: 33.3%;
+    .order-detail-pro{ width: 38%;}
+    .order-detail-price{ width: 15%;}
+  }
+  // name, amount
+  .pro-name, .pro-amount{ @extend %floatLeft; text-align: left;}
+  .pro-name{ width: 85%; padding-left: 5%;}
+  .pro-amount{ width: 15%; padding-left: 1%;}
+  // equal width
+  .order-detail-width{ @extend %floatLeft; width: 25%;}
+  // btn
+  .order-detail-btn{
+    .btn{ width: 123px; height: 30px; font-size: $full; line-height: 30px;}
+    .btnGrayLight{ margin-bottom: 10px;}
+  }
+  // line in middle
+  .order-detail-line{ margin-bottom: 30px;
+    .order-detail-width{
+      &:nth-of-type(1)>div{ width: 80%; margin-left: 20%;}
+      &:nth-last-of-type(1)>div{ width: 80%; margin-right: 20%;}
+    }
+  }
+  // process img
+  .process-imgArea{ @extend %flowHidden; margin-bottom: 20px;
+    .process-img{ border-width: 0; @include bgImg('order/orderDetail.png', auto 100%); width: 79px; height: 74px; margin: 0 auto 7px;}
+    .order-detail-width{
+      &:nth-of-type(1) .process-img{ background-position: 0}
+      &:nth-of-type(2) .process-img{ background-position: 33.2% 0;}
+      &:nth-of-type(3) .process-img{ background-position: 66.5% 0;}
+      &:nth-last-of-type(1) .process-img{ background-position: 100% 0;}
+    }
+    &.process-imgArea-refund{
+      .process-img{ background-image: url("../images/order/refundProcess.png"); width: 124px;}
+      .order-process-refundNote{ font-size: $font15; line-height: 1.3; height: 42px;}
+      .order-time{ margin-top: 45px;}
+    }
+  }
+  // process time and location
+  .order-process-time{
+    .order-detail-width{ vertical-align: top;
+      .singleLineGray{ margin-top: 15px;}
+      &:nth-of-type(1){
+        .singleLineGray{ width: 80%; margin-left: 20%;}
+        .order-time{ width: 100%; margin-left: 0;}
+        .order-process-circle{ left: 35%;}
+      }
+      &:nth-last-of-type(1){
+        .singleLineGray{ width: 80%; margin-right: 20%;}
+        .order-time{ width: 100%; margin-right: 0;}
+        .order-process-circle{ left: 60%;}
+      }
+    }
+    .order-time{ margin: 50px 0 10px;}
+    .order-process-here{
+      .order-process-circle{ opacity: 1;}
+    }
+  }
+}

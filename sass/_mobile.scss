@@ -1,0 +1,185 @@
+@import "compass/css3";
+@import "variable";
+
+@media all and (max-width: 767px){
+  //-----------common-----------
+
+  //-----------header-----------
+  header{ width: $full; @include mSetHeight(203); border-bottom: none; position: static;;
+    &:after{ display: none;}
+    .m{
+      >div{ width: 100%;}
+      .mHeadTop{ background-color: $colorPink11; @include mSetHeight(136);}
+      .mHeadBottom{ background-color: $colorPink12; @include mSetHeight(67); @include box-shadow(0 0 10px 0 rgba(0, 0, 0, 0.15));}
+    }
+    .mHeadTop{ text-align: center; position: relative;
+      >img{ width: 22%; height: auto; padding-top: 1.5vw;}
+      >div{ position: absolute; @include bgImg("common/mHeadSub.png", auto 7vw); width: 6.5%; height: 7vw; top: 9.2vw;}
+      #hamburger{ left: 4.8%;}
+      #cartImg{ right: 5.6%; background-position: 100% 0; text-align: center;
+        .cartNum{ width: 80%; height: 75%; background-color: $colorPink2; @include border-radius(50%); color: #fff; font-size: 12px; line-height: 1.7;
+          @include transform(scale(0.8)); position: absolute; top: 0; right: -26%;}
+      }
+      &.hamTopFix{ position: fixed; top: 0; left: 0; z-index: 110;}
+    }
+    .mHeadBottom{ @include aColor($colorPink2); font-size: $mfont29;
+      &.hamBottomFix{ top: 21.4vw; position: absolute;}
+      ul{ overflow: hidden;
+        li{ float: left; @include calWidth(100%, 3); text-align: center; padding: 3vw 0;}
+      }
+    }
+    .hambuergerInfo{ background-color: $colorBlack2; @include aColor(#fff); position: fixed; top: 21.25vw; left: -100%; z-index: 110; overflow: auto;
+      .hamTop{ padding: 5vw 0 0 4.8%; @include placeholderColor($colorBlack3); position: relative;
+        >div{ display: inline-block;}
+        input{ border: none; background-color: transparent; font-size: $mfont2982; width: 85.6%; color: $colorBlack3;}
+        .searchArea{ padding-bottom: 2.3%; border-bottom: 1px solid $colorBlack3; width: 64.235%;
+          .mXsearchIcon{ background-position: 0 100%; vertical-align: text-bottom;}
+        }
+        #hamClose{ width: 6%; position: absolute; top: 6vw; right: 5.6%;}
+      }
+      .hamBottom{ padding-left: 15%; font-size: $mfont30; margin: 9vw 0 20vw;
+        .micon{ @include bgImg("common/micon.png", 100% auto); display: inline-block; width: 5%; height: 4.6vw; vertical-align: text-bottom; margin-right: 3%;}
+        ul{
+          li{ margin-top: 3.9vw;
+            &.hasLogin{ display: none;}
+            &.mHamline{ margin: 4.6vw 0 0.7vw -15%; background-color: $colorBlack; height: 1px;}
+            &:nth-of-type(1){ margin-top: 0;}
+            &:nth-of-type(2) .micon{ background-position: 0 10%;}
+            &:nth-of-type(3) .micon{ background-position: 0 40%;}
+            &:nth-of-type(4) .micon{ background-position: 0 20%;}
+            &:nth-of-type(5) .micon{ background-position: 0 30%;}
+            &:nth-of-type(7){ margin-top: 4.6vw;
+              .micon{ background-position: 0 50%;}
+            }
+            &:nth-of-type(8) .micon{ background-position: 0 60%;}
+            &:nth-of-type(9) .micon{ background-position: 0 70%;}
+            &:nth-of-type(11){ margin-top: 4.6vw;
+              .micon{ background-position: 0 80%;}
+            }
+            &:nth-of-type(12) .micon{ background-position: 0 90%;}
+            &:nth-of-type(13) .micon{ background-position: 0 100%;}
+            &:nth-of-type(15){ margin: 4.6vw 6.9% 0 0;}
+            &.mMedia{ display: inline-block;
+              span{ display: inline-block; height: 5vw; width: 5vw; vertical-align: text-bottom; @include border-radius(3px); margin-right: 2.8vw;}
+              .fb{ @include bgImg("common/mfb.png", auto 87.8%, transparent, no-repeat, 55%, bottom); background-color: $colorFb;}
+              .line{ @include bgImg("common/line.png", 75% auto, transparent, no-repeat, center, center); background-color: $colorLine;}
+            }
+          }
+        }
+        .hamBottom-subUl{ padding-left: 13.5%; margin: 4vw 0 6vw; font-size: $mfont22;}
+      }
+    }
+  }
+
+  //-----------footer-----------
+  footer{ @include mSetminHeight(1117); margin-top: 15vw;}
+  .footerTitle { text-align: center; width: 28.9%; border-bottom: 1px solid $colorPink2; margin: 0 auto 6vw;
+    div{ color: $colorPink2; font-size: $mfont42; width: 100%; padding-bottom: 2.03vw; border-bottom: 1px solid $colorPink3;}
+  }
+  .footerTop{ @include mSetHeight(290); background: #fff none; @include aColor(#fff); text-align: center; margin-bottom: 0.6vw;
+    .verLine{ display: none;}
+    .footerTimg{ height: 9.8vw; @include bgImg("common/mFooterTop.png", auto 100%); width: 31%; margin: 2.2vw 2% 0 0;}
+    a{ @include mSetHeight(93); width: 49.75%; @include bgImg("common/mFooterTopBg1.png"); margin-bottom: 0.9vw; font-size: $mfont2901;
+      &:nth-of-type(5){ @include bgImg("common/mFooterTopBg2.png"); width: 100%;}
+      &:nth-of-type(2n){ margin-left: 0.5%;}
+      >div, img{ display: inline-block; vertical-align: middle; margin: 2.2vw auto 0;}
+    }
+    a:nth-of-type(1) .footerTimg{ background-position: 94.5% 0; width: 20%;}
+    a:nth-of-type(2) .footerTimg{ background-position: 74% 0;}
+    a:nth-of-type(3){
+      .footerTimg{ background-position: 26% 0; margin-top: 1vw;}
+      .fTopName{ margin-top: 3.5vw;}
+    }
+    a:nth-of-type(4){
+      .footerTimg{ background-position: 50% 0; width: 18%;}
+    }
+    a:nth-of-type(5){
+      .footerTimg{ width: 12%;}
+      .fTopName{ margin-top: 3.5vw;}
+      img{ display: inline-block; width: 10%; height: auto; position: relative; left: 19%;}
+    }
+  }
+  .footerBottom{ @include mSetminHeight(533); padding: 0; background-color: #fff;}
+  .fBottomNav{ margin-bottom: 5.6vw; font-size: $mfont2931; text-align: center;
+    >div:not(.footerBottom-title){ width: 100%; background-color: $colorGray; @include mSetHeight(85); margin: 0 0 0.3vw; padding: 3.9vw 0 0;}
+    .footerBottom-title{ border-bottom: none; font-size: $full; padding-bottom: 0; margin-bottom: 0;}
+    ul{ font-size: $font14; display: none; padding-left: 0;}
+    .fBottomSmall{ margin-bottom: 0; display: inline-block; font-size: $full;}
+    >div.fBottomCs{ @include mSetHeight(230);
+      .footerBottom-title{ width: 76%; margin: 0 auto 4vw; border-bottom: 1px solid $colorGray2; padding-bottom: 4vw;}
+      div:not(.fBottomSmall):not(.footerBottom-title){ font-size: 79%;}
+      @include aColor($colorBlack);
+      .colorPink{ font-size: 169%;}
+      a{ display: block;}
+    }
+  }
+  .fBottomInfo{ font-size: $mfont1556; padding: 15.8vw 0 0; @include mSetHeight(165); position: relative; text-align: center;
+    .inlineBlock, .socialBtn{ position: absolute; top: 0;}
+    .inlineBlock{ margin-left: 0; display: block; font-size: 145%; top: 10vw; padding: 0; left: 0; width: 100%;}
+  }
+
+  //-----------series-----------
+  #cmsAnchor{ margin-bottom: 0; padding: 0 3.2%;
+    .rightLarge{ width: 100%; padding-left: 0;}
+  }
+
+  //-----------product list-----------
+  .mProList{ margin-top: 8.5vw;
+    .openHide{ margin-bottom: 9vw;}
+  }
+  .sitemap-list{
+    li:nth-last-of-type(1){
+      .mProList .openHide{ margin-bottom: 0;}
+    }
+  }
+  .openHide .openHideBtn.mOpenHideBtnSpe{ color: $colorPink4; font-size: $mfont36; border: 0 dotted $colorPink4; border-bottom-width: 1px; text-align: left;
+    margin-bottom: 2vw;
+    span{ right: 5.9%;}
+    // shadow
+    &:after{ width: 100%; height: 1.8vw; content: ''; display: block; @include gradient2(rgba(238,236,239,0.5), #fff); position: relative; bottom: 0.3vw;}
+    >div{ border-bottom: 1px solid $colorPink4; display: inline-block; position: relative; bottom: 0.3vw; padding: 0 2%; margin-left: 9%;}
+    //---top 10---
+    &.mOpenHideBtnSpe-top{ color: #000; margin: 0 0 6.25vw; text-align: center;
+      div{ border-bottom: 2px solid $colorPink2; margin-left: 0;}
+    }
+  }
+  .mProListOpenHideInfo{
+    ul{ border-bottom: 1px solid $colorBlack3;
+      li{ @include aColor($colorBlack2); font-size: $mfont30; border-top: 1px solid $colorGray2; padding-left: 14%; line-height: 2.5;
+        &:nth-of-type(1){ border: none;}
+      }
+    }
+  }
+
+  //-----------top 10-----------
+  .mTop-title{ margin: 5vw 0 9.375vw; color: #000; text-align: center;
+    .openHide .openHideBtn.mOpenHideBtnSpe:after{ bottom: 0.4vw;}
+    .mTop-title-large{ font-size: $mfont26; margin-bottom: 3.125vw;}
+    p{ font-size: $mfont18;line-height: 1.7;}
+  }
+  .mTop-proList{ padding: 0 3.125%;
+    li{ border-bottom: 2px solid $colorPink12; margin-bottom: 17vw;
+      &:nth-of-type(2n) .mTop-proInfo{ padding-left: 2%;}
+      &:nth-of-type(2) .mTop-num{ background-position: 0 11.2%;}
+      &:nth-of-type(3) .mTop-num{ background-position: 0 22.29%;}
+      &:nth-of-type(4) .mTop-num{ background-position: 0 33.39%;}
+      &:nth-of-type(5) .mTop-num{ background-position: 0 44.4%;}
+      &:nth-of-type(6) .mTop-num{ background-position: 0 55.55%;}
+      &:nth-of-type(7) .mTop-num{ background-position: 0 66.66%;}
+      &:nth-of-type(8) .mTop-num{ background-position: 0 77.77%;}
+      &:nth-of-type(9) .mTop-num{ background-position: 0 88.8%;}
+      &:nth-of-type(10){ margin-bottom: 0;
+        .mTop-num{ background-position: 0 100.1%;}
+      }
+    }
+    .btn{ font-size: $mfont26; margin-bottom: 2.3vw;}
+  }
+  .mTop-proNum, .mTop-proInfo{ display: inline-block; vertical-align: bottom;}
+  .mTop-proNum{ width: 42.1875%; height: 46.5vw; position: relative;
+    img{ width: 36.8%; height: 100%; position: absolute; right: 11%; bottom: -5vw;}
+  }
+  .mTop-num{ width: 75.185%; height: 31vw; position: absolute; left: 0; bottom: -0.7vw; @include bgImg('top/top10_num.png', 100% auto);}
+  .mTop-proInfo{ width: 56.54%;}
+  .mTop-proInfo-title{ color: $colorBlack4; font-size: $mfont40; line-height: 1.3;}
+  .mTop-proInfo-capacity{ font-size: $mfont30; color: $colorPink2; line-height: 1.5; margin-bottom: 2vw;}
+}
