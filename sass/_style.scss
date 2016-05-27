@@ -246,7 +246,7 @@
  .news-pro-title{ font-size: $font24; color: $colorPink4; border-bottom: 1px solid $colorPink4; padding-bottom: 5px; margin-bottom: 10px; display: inline-block;}
 .news-pro-name{ font-size: $full; color: $colorBlack; line-height: 1.7;}
 .news-pro-capacity{ font-size: $font13; color: $colorBlack; margin-bottom: 10px;}
-.btn-news{ width: 70px; font-size: $font12; margin: 0; padding: 3px 0;
+.btn-news{ width: 70px; font-size: $font12; margin: 0; padding: 3px 0; position: absolute; right:62px;
   &.btn-news-more{ font-size: $font24; width: 187px; padding: 7px 0; margin: 0 auto;}
 }
 

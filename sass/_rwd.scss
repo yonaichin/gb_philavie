@@ -838,7 +838,7 @@
   .news-pro-title{ font-size: $mfont28; padding-bottom: 1vw; margin-bottom: 1.5vw;}
   .news-pro-name{ font-size: $full;}
   .news-pro-capacity{ font-size: $full; margin-bottom: 2.9vw;}
-  .btn-news{ width: 100%; font-size: $full; padding: 1.4vw 0;
+  .btn-news{ width: 100%; font-size: $full; padding: 1.4vw 0; position: relative; right: 0;
     &.btn-news-more{ font-size: $mfont30; width: 72.9%; padding: 2.3vw 0;}
     &.btn-praise-list{ width: 20%; margin-left: 80%;}
   }
