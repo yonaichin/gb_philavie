@@ -242,17 +242,17 @@
         .td.m{ display: table-cell;}
         .td{ line-height: 1.5; position: relative;
           img{ width: 90%;
-            &.cart-delete{ width: 27%; position: absolute; bottom: 3.5vw; right: 35%;}
+            &.cart-delete{ width: 27%; position: absolute; bottom: 3.5vw; right: 50%;}
           }
         }
         .tr{
            &:not(.table-style-th){
-             .td{ padding-bottom: 7vw;}
+             .td{ padding-bottom: 7vw; padding-right:15px}
            }
          }
         // width
         .td-cart-wSmall{ width: 30%;}
-        .td-cart-wBig{ width: 37%;}
+        .td-cart-wBig{ width: 25%;}
         .td-cart4-wSmall{ width: 20%;}
         .td-cart4-wBig{ width: 40%;}
         .td-cart-mwMiddle{ width: 18%;}

@@ -681,7 +681,11 @@ hr{ width: 100%; height: 1px; background-color: $colorBlack; border-bottom: 1px 
   .cart-discount-gray, input{ color: $colorBlack;}
   &.cart-amountArea-noAmountCal{
     .cart-cal-bubble{ display: none;}
-    .cart-cal-show{ margin-left: 48%;}
+    .cart-cal-show{ 
+      // margin-left: 42%;
+      float: right;
+      margin-right: 8px;
+    }
   }
 }
 // discount
