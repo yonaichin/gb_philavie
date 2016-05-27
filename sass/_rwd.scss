@@ -150,6 +150,10 @@
   .btnPink{ color: $colorPink2;
     &.btnPink-short{ width: 80%; height: 9.375vw; font-size: $mfont30; line-height: 9.375vw;}
   }
+  .trackBtn {
+    text-align: right;
+    margin-right: 8px;
+  }
   // breadCrumb
   .breadCrumb{ font-size: $mfont21; position: absolute; top: 4.5vw; left: 0; width: 100%; margin-bottom: 0; padding-left: 3.125%;
     &.breadCrumb-noTop{ margin: 0;}

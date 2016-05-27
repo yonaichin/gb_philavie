@@ -79,7 +79,13 @@
 // series browse btn
 .btn{
   &.browse{ font-size: $font20; padding: 7px 0; margin-bottom: 44px; width: 15.5%;}
-  &.trackBtn{ display: inline-block; padding: 8px 0; width: 31.6%; @extend %verMiddle; font-size: $font18;
+  &.trackBtn{
+    min-width: 100px;
+    // text-align: right;
+    display: inline-block;
+    padding: 8px 0;
+    width: 31.6%; @extend %verMiddle;
+    font-size: $font18;
     span{
       &.heart{ @include bgImg("common/track.png", 100% auto); width: 19px; height: 16px;display: inline-block; @extend %verMiddle;}
       &.trackWord{ margin-right: 6%; @extend %verMiddle;}
