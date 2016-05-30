@@ -8957,17 +8957,22 @@ footer {
 
   /* line 182, ../sass/_mobile.scss */
   .mTop-proInfo {
-    width: 56.54%;
+    width: 54%;
   }
 
-  /* line 183, ../sass/_mobile.scss */
+  /* line 186, ../sass/_mobile.scss */
   .mTop-proInfo-title {
     color: #6d6e70;
     font-size: 166.7%;
     line-height: 1.3;
+    overflow: hidden;
+    width: calc(100% + 1em);
+    height: 1.3em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
-  /* line 184, ../sass/_mobile.scss */
+  /* line 198, ../sass/_mobile.scss */
   .mTop-proInfo-capacity {
     font-size: 125%;
     color: #77226c;

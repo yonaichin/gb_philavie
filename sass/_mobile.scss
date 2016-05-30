@@ -179,7 +179,21 @@
     img{ width: 36.8%; height: 100%; position: absolute; right: 11%; bottom: -5vw;}
   }
   .mTop-num{ width: 75.185%; height: 31vw; position: absolute; left: 0; bottom: -0.7vw; @include bgImg('top/top10_num.png', 100% auto);}
-  .mTop-proInfo{ width: 56.54%;}
-  .mTop-proInfo-title{ color: $colorBlack4; font-size: $mfont40; line-height: 1.3;}
+  .mTop-proInfo{ 
+    // width: 56.54%;
+    width: 54%;
+  }
+  .mTop-proInfo-title{ 
+    color: $colorBlack4; 
+    font-size: $mfont40; 
+    line-height: 1.3;
+    // position: absolute;
+    // margin-top:-1.3em;
+    overflow: hidden;
+    width: calc(100% + 1em);
+    height: 1.3em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
   .mTop-proInfo-capacity{ font-size: $mfont30; color: $colorPink2; line-height: 1.5; margin-bottom: 2vw;}
 }
