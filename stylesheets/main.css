@@ -5356,7 +5356,7 @@ label {
   }
   /* line 179, ../sass/_formRwd.scss */
   .selectLabel.select-country select {
-    min-width: 44%;
+    min-width: 42%;
   }
   /* line 184, ../sass/_formRwd.scss */
   .selectLabel.select-TW {
@@ -5364,7 +5364,7 @@ label {
   }
   /* line 187, ../sass/_formRwd.scss */
   .selectLabel.select-TW select {
-    min-width: 44%;
+    min-width: 42%;
   }
   /* line 190, ../sass/_formRwd.scss */
   .selectLabel.select-TW.select-maxWidth select {
