@@ -127,6 +127,12 @@ a{ text-decoration: none; cursor: pointer;
   }
   &.breadCrumb-small{
     ul li.to{ margin: 0 5.79%;}
+    ul.product_breadcrumb {
+      position: absolute;
+      width: 100%;
+
+      li.to{ margin: 0 8px;} 
+    }
   }
 }
 .breadCrumb-now{ @include aColor($colorPink17);}
@@ -191,7 +197,9 @@ a{ text-decoration: none; cursor: pointer;
 }
 
 // classify nav List
-.proNavList{ margin-bottom: 300px;
+.proNavList{ 
+  margin-top:100px;
+  margin-bottom: 300px;
   >ul{
     >li{ font-size: $font15; color: $colorBlack; margin-bottom: 25px; cursor: pointer;
       span{ display: inline-block; width: 12px; height: 12px; @include bgImg("common/proNavArrow.png", auto 100%); background-position: 100% 0; margin-left: 3%;}
@@ -841,3 +849,4 @@ form.form-borderBottom.cart3-form{ padding-bottom: 0; margin-bottom: 50px;
 
 //---open hide arrow---
 .openHideArrow{ display: inline-block; width: 12px; height: 12px; @include bgImg("common/proNavArrow.png", auto 100%); background-position: 100% 0; margin-left: 3%;}
+
