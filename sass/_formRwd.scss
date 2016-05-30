@@ -217,7 +217,17 @@
         input{ width: 68%;}
       }
       .table-style-column2{ padding-left: 0;
-        input{ width: 26%; padding-left: 1.5%;}
+        label {
+          width:35%;
+          input{ 
+            // width: 26%; 
+            width: 76%; 
+            padding-left: 1.5%;
+          }
+          span { display:none;}
+          img { width:20px;}
+        }
+
       }
     }
     .table-style-1line-noInput{ margin-bottom: 5.46875vw; padding: 0 9%;

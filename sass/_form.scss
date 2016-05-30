@@ -304,9 +304,12 @@ label{ vertical-align: middle;}
     .table-style-column2{ width: 58.4%; padding-left: 1.25%;
       input{ width: 84%; margin-right: 2.7%;}
       label{ @extend %floatLeft; width: 30%;
-        &:nth-of-type(1){ width: 32%;
-          input{width: 78%;}
+        &:nth-of-type(1){ 
+          // width: 32%;
+
         }
+        input{width: 78%;}
+        span { display:inline-block;}
       }
     }
   }
