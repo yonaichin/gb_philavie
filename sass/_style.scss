@@ -31,7 +31,12 @@
 
 // pro list small
 .proInfoList.proInfoListSub{ margin: 30px 0 35px;
-  &.bottomElement{ margin-bottom: 150px;}
+  &.bottomElement{ 
+    margin-bottom: 150px;
+    .openHideInfo {
+      border-bottom: 1px solid $colorGray2;
+    }
+  }
   ul{
     li{ border-left: 1px solid $colorGray;
       &:nth-of-type(4n+1){ border: none;}

@@ -163,9 +163,16 @@
   }
   // open hide
   .openHide{
-    .openHideBtn{ height: 8.5vw; border-width: 1px 0; border-color: $colorGray2; border-style: solid; font-size: $mfont30; line-height: 8.5vw; color: $colorBlack;
+    .openHideBtn{ height: 8.5vw; 
+      // border-width: 1px 0;
+      border-width: 1px 0 0 0;
+      border-color: $colorGray2; 
+      border-style: solid; 
+      font-size: $mfont30; 
+      line-height: 8.5vw; 
+      color: $colorBlack;
       text-align: center; position: relative; margin-bottom: 4.6vw;
-      span{ position: absolute; right: 1.5vw; top: 2vw; height: 50%; width: 4.6%; @include bgImg("common/mopenhide.png", auto 100%);}
+      span{ position: absolute; right: 1.5vw; top: 4vw; height: 50%; width: 4.6%; @include bgImg("common/mopenhide.png", auto 100%);}
     }
     .openHideInfo{ display: none;}
     &.open{
