@@ -421,6 +421,10 @@ a{ text-decoration: none; cursor: pointer;
 .staticInfo-content{ color: $colorBlack3; line-height: 2; font-size: $full; padding-right: 2%;
   span{ color: $colorBlack;}
   &.staticInfo-content-noBttom{ margin-bottom: 0;}
+
+  br:first-child {
+    display: none;
+  }
 }
 .staticInfo-inputBtn{ padding: 36px 18% 36px 22.5%; margin: 0 auto; width: 91%; height: 40px;
   label, .btn{ @extend %inline-block; vertical-align: top; height: 100%;}

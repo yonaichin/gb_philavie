@@ -113,6 +113,7 @@
 @media all and (max-width: 783px){
   // header pc nav
   header .pcHeadRight nav > ul:not(.hoverList) > li a:not(.nav-banner):not(.btn){ padding: 0 1%;}
+
 }
 
 @media all and (max-width: 767px){
@@ -1035,4 +1036,10 @@
     }
   }
   .cms-btn{ margin-top: 10vw;}
+  .staticInfo-content {
+    br:first-child {
+      display: block;
+    }
+  }
+
 }
