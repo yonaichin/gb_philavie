@@ -167,11 +167,30 @@
 
   //---select---
   .selectLabel{ font-size: $mfont20;
+
     select{ height: 8vw; font-size: $full;
       &.select-minWidth{ width: 39%;}
       &.survey-select-m{ width: 100%;}
     }
     &.select-maxWidth select{ max-width: 31%;}
+
+    &.select-country {
+      margin-left: 0;   
+      select {
+        min-width: 44%; 
+      }
+
+    }
+    &.select-TW {
+
+      margin-left: 0;   
+      select {
+        min-width: 44%; 
+      }
+      &.select-maxWidth select {
+        margin-top:10px;
+      }
+    }
   }
 
   .form-title-padding{ padding: 0 3.125%; font-size: $mfont36;
@@ -376,4 +395,5 @@
       &:nth-of-type(2){ width: 45%;}
     }
   }
+  
 }

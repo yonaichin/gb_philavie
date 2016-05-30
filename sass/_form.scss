@@ -268,7 +268,8 @@ label{ vertical-align: middle;}
 }
 
 //---select---
-.selectLabel{ font-size: $font12; margin-left: 2%;
+.selectLabel{ font-size: $font12; 
+  margin-left: 2%;
   select{ background: #fff; @include border-radius(0); height: 30px; font-size: $font15; border: 1px solid $colorGray5;
     &.select-minWidth{ min-width: 14.8%;}
   }
