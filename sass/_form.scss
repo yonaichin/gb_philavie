@@ -164,13 +164,21 @@ label{ vertical-align: middle;}
   }
 }
 .form-refundStyle-tdBig{
-  .form-refundStyle-tdTitle{ width: 130px;}
+  .form-refundStyle-tdTitle{ 
+    // width: 130px;
+    width: 105px;
+  }
   .form-refundStyle-tr .td{ vertical-align: baseline; padding-bottom: 15px;
     &.justify{ padding-bottom: 5px;}
   }
-  .form-refundStyle-trTdPaddingB .td{ padding-bottom: 10px;}
+  .form-refundStyle-trTdPaddingB .td{ 
+    padding-bottom: 10px;
+  }
   .form-refundStyle-trAddress .td{ padding-bottom: 0;}
-  .form-refundStyle-tdInput{ padding-left: 10px;}
+  .form-refundStyle-tdInput{ 
+    // padding-left: 10px;
+    padding-left: 0px;
+  }
   .form-refundStyle-trTextarea{
     .td{ vertical-align: top;}
   }

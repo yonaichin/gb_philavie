@@ -102,7 +102,10 @@
     .chkRadio.radioImg, .chkRadio.radioImgWhite{ margin: 0 1% 3px 0;}
   }
   .form-refundStyle-tdBig{
-    .form-refundStyle-tdTitle{ width: 35%;}
+    .form-refundStyle-tdTitle{ 
+      // width: 35%;
+      width: 28%;
+    }
     .form-refundStyle-tr .td{ padding-bottom: 3.75vw;
       &.td-no-paddBottom{ padding-bottom: 0;}
       &.justify{ padding-bottom: 1vw;}
