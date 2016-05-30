@@ -525,7 +525,18 @@ a{ text-decoration: none; cursor: pointer;
 .proInfoList-limited-timeTitle{ color: $colorPink2; font-size: $font3115; margin-bottom: 15px;}
 .proInfoList-limited-time{ font-size: $font15; color: $colorBlack3; text-align: center;
   >div{ @extend %inline-block;
-    span{ color: $colorBlack;@extend %inline-block; font-size: 273%; border: 1px solid $colorGray2; padding: 10px 15px; vertical-align: super;}
+    // span{ color: $colorBlack;@extend %inline-block; font-size: 273%; border: 1px solid $colorGray2; padding: 10px 15px; vertical-align: super;}
+    span{ 
+      color: $colorBlack;
+      @extend %inline-block; 
+      font-size: 42px; 
+      border: 1px solid $colorGray2; 
+      height: 62px;
+      line-height: 62px;
+      width: 78px;
+      text-align: center; 
+      vertical-align: super; 
+     }
   }
 }
 
