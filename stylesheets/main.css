@@ -7677,28 +7677,28 @@ header .pc nav > ul > li.navOpen {
 @media all and (min-width: 768px) {
   /* line 505, ../sass/_style.scss */
   .activity-pro-list li:hover {
-    border: 4px solid #ccc;
-    padding: 4px 6px 5px;
+    border: 1px solid #ccc;
+    padding: 7px 6px 5px;
   }
-  /* line 506, ../sass/_style.scss */
+  /* line 510, ../sass/_style.scss */
   .activity-pro-list li:hover .activity-pro-img {
     width: 88.7%;
   }
-  /* line 507, ../sass/_style.scss */
+  /* line 511, ../sass/_style.scss */
   .activity-pro-list li:hover .activity-price-ori {
     padding-left: 9px;
   }
 
-  /* line 510, ../sass/_style.scss */
+  /* line 514, ../sass/_style.scss */
   .activity-proArea-2 li:hover .activity-pro-img {
     width: 72.7%;
   }
-  /* line 511, ../sass/_style.scss */
+  /* line 515, ../sass/_style.scss */
   .activity-proArea-2 li:hover .activity-price-ori {
     padding-left: 29px;
   }
 }
-/* line 517, ../sass/_style.scss */
+/* line 521, ../sass/_style.scss */
 .btn-hover:hover {
   color: #fff;
   background-color: #ba8fb0;
