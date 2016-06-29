@@ -131,7 +131,7 @@ a{ text-decoration: none; cursor: pointer;
       position: absolute;
       width: 100%;
 
-      li.to{ margin: 0 8px;} 
+      li.to{ margin: 0 1em;} 
     }
   }
 }
@@ -422,9 +422,12 @@ a{ text-decoration: none; cursor: pointer;
   span{ color: $colorBlack;}
   &.staticInfo-content-noBttom{ margin-bottom: 0;}
 
+
+}
+.custom-break {
   br:first-child {
     display: none;
-  }
+ }
 }
 .staticInfo-inputBtn{ padding: 36px 18% 36px 22.5%; margin: 0 auto; width: 91%; height: 40px;
   label, .btn{ @extend %inline-block; vertical-align: top; height: 100%;}

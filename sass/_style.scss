@@ -251,8 +251,9 @@
  .news-pro-title{ font-size: $font24; color: $colorPink4; border-bottom: 1px solid $colorPink4; padding-bottom: 5px; margin-bottom: 10px; display: inline-block;}
 .news-pro-name{ font-size: $full; color: $colorBlack; line-height: 1.7;}
 .news-pro-capacity{ font-size: $font13; color: $colorBlack; margin-bottom: 10px;}
-.btn-news{ width: 70px; font-size: $font12; margin: 0; padding: 3px 0; position: absolute; right:62px;
+.btn-news{ width: 70px; font-size: $font12; margin: 0; padding: 3px 0; position: inherit;
   &.btn-news-more{ font-size: $font24; width: 187px; padding: 7px 0; margin: 0 auto;}
+  &.more-right{right: 62px; position: absolute;}
 }
 
 //---praise---
@@ -358,7 +359,7 @@
 // content
 .praiseList-small-content{ @extend %flowHidden; position: absolute; bottom: 70px; left: 0; z-index: 20; width: 80%; margin-left: 8%;}
 .praiseList-proCapacity{ font-size: $font15; color: $colorBlack; border-bottom: $colorPink12 2px solid; padding: 0 0 8px 8.5%; width: 70%; margin-bottom: 4%;}
-.praiseList-small-content-bottom{ position: absolute; bottom: 0; left: 0; width: 100%;}
+.praiseList-small-content-bottom{ position: absolute; bottom: 0; left: 0; width: 100%; z-index: 18;}
 
 //---sitemap---
 .sitemap{
@@ -524,4 +525,7 @@
 //---btn detail---
 .btn-hover{
   &:hover{ color: #fff; background-color: $colorPink4;}
+}
+.no-margin-top {
+  margin-top:0;
 }

@@ -156,7 +156,7 @@
     margin-right: 8px;
   }
   // breadCrumb
-  .breadCrumb{ display:none; font-size: $mfont21; position: absolute; top: 4.5vw; left: 0; width: 100%; margin-bottom: 0; padding-left: 3.125%;
+  .breadCrumb{ display:block; font-size: $mfont21; position: absolute; top: 4.5vw; left: 0; width: 100%; margin-bottom: 0; padding-left: 3.125%;
     &.breadCrumb-noTop{ margin: 0;}
     ul li{
       &.to{ margin: 0 1.4%;}
@@ -165,15 +165,15 @@
   // open hide
   .openHide{
     .openHideBtn{ height: 8.5vw; 
-      // border-width: 1px 0;
-      border-width: 1px 0 0 0;
+      border-width: 1px 0;
+      // border-width: 1px 0 1px 0;
       border-color: $colorGray2; 
       border-style: solid; 
       font-size: $mfont30; 
       line-height: 8.5vw; 
       color: $colorBlack;
       text-align: center; position: relative; margin-bottom: 4.6vw;
-      span{ position: absolute; right: 1.5vw; top: 4vw; height: 50%; width: 4.6%; @include bgImg("common/mopenhide.png", auto 100%);}
+      span{ position: absolute; right: 1.5vw; top: 25%; height: 50%; width: 4.6%; @include bgImg("common/mopenhide.png", auto 100%);}
     }
     .openHideInfo{ display: none;}
     &.open{
@@ -849,6 +849,7 @@
   .btn-news{ width: 100%; font-size: $full; padding: 1.4vw 0; position: relative; right: 0;
     &.btn-news-more{ font-size: $mfont30; width: 72.9%; padding: 2.3vw 0;}
     &.btn-praise-list{ width: 20%; margin-left: 80%;}
+    &.more-right{right: 0; position: inherit;}
   }
 
   //---praise---
