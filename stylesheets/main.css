@@ -2989,6 +2989,7 @@ hr {
 /* line 717, ../sass/_element.scss */
 .cart-amountArea.cart-amountArea-noAmountCal .cart-cal-bubble {
   display: none;
+  position: absolute;
 }
 /* line 718, ../sass/_element.scss */
 .cart-amountArea.cart-amountArea-noAmountCal .cart-cal-show {
@@ -10250,6 +10251,7 @@ footer {
   /* line 485, ../sass/_rwd.scss */
   .proInfoList-limited-time {
     font-size: 75%;
+    transform: translateX(12px);
   }
   /* line 486, ../sass/_rwd.scss */
   .proInfoList-limited-time > div {
@@ -10262,8 +10264,9 @@ footer {
   /* line 488, ../sass/_rwd.scss */
   .proInfoList-limited-time > div span {
     font-size: 200%;
-    padding: 2.5vw 13.5%;
+    margin-right: 3px;
     vertical-align: initial;
+    width: 40px;
   }
 
   /* line 493, ../sass/_rwd.scss */

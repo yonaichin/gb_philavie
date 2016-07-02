@@ -482,10 +482,10 @@
   //---index product limited sale time---
   .proInfoList-limited-timeArea{ margin: 5.4vw 0;}
   .proInfoList-limited-timeTitle{ font-size: $mfont42; margin-bottom: 3.125vw;}
-  .proInfoList-limited-time{ font-size: $mfont18;
+  .proInfoList-limited-time{ font-size: $mfont18; transform: translateX(12px);
     >div{ width: 20%;
       &:nth-of-type(2){ width: 23%;}
-      span{ font-size: 200%; padding: 2.5vw 13.5%; vertical-align: initial;}
+      span{ font-size: 200%; margin-right:3px; vertical-align: initial; width: 40px;}
     }
   }
 

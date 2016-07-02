@@ -783,7 +783,13 @@ function praiseSmallReposition(){
             if ($(this).height()>titleLargeHeight) titleLargeHeight = $(this).height();
         });
     if (!isMobile){
+        console.log('!isMobile');
         $praiseListSmallArea.find('li').css('padding-bottom', largeHeight+120-$('.praiseList-bottomStyle').height());
+        $praiseListSmallArea.find('.praise-para-content').each(function(){
+            console.log('content',$(this).height(), (largeHeight - titleLargeHeight)/2 );
+            // if ($(this).height()>largeHeight) largeHeight = $(this).height();
+            $(this).height('5em').css('overflow-y', 'hidden');
+        })
         $('.praiseList-small-content').height(largeHeight);
     }
     $praiseListSmallArea.find('.praise-para-title').height(titleLargeHeight);
