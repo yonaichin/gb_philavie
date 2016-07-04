@@ -10267,6 +10267,8 @@ footer {
     margin-right: 3px;
     vertical-align: initial;
     width: 40px;
+    height: 40px;
+    line-height: 40px;
   }
 
   /* line 493, ../sass/_rwd.scss */
