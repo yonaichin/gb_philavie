@@ -118,7 +118,7 @@ a{ text-decoration: none; cursor: pointer;
 
 
 // breadCrumb
-.breadCrumb{ @include aColor($colorBlack3); font-size: $font14; color: $colorBlack3; padding-left: 4.5%; margin-bottom: 20px; @include aHover($colorPink17);
+.breadCrumb{ @include aColor($colorBlack3); font-size: $font14; color: $colorBlack3; padding-left: 4.5%; margin-bottom: 28px; @include aHover($colorPink17);
   &.breadToLeft{ padding-left: 0;}
   &.breadCrumb-noTop{ margin: 30px 0 20px;}
   &.breadCrumb-marginBottom{ margin-bottom: 30px;}
@@ -130,8 +130,13 @@ a{ text-decoration: none; cursor: pointer;
     ul.product_breadcrumb {
       position: absolute;
       width: 100%;
+      margin-left:-4px;
 
-      li.to{ margin: 0 1em;} 
+      li.to{ margin: 0 1.1em;} 
+    }
+    ul.search_breadcrumb {
+      margin-top:-10px;
+      margin-left:-4px;
     }
   }
 }
