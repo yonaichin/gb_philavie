@@ -188,8 +188,23 @@ function chkRadioClick(){
         if ($(this).hasClass('radioBox-invoice2')){
             $('.td-invoice2-info').addClass('open');
             $('.td-invoice3-info').removeClass('open');
+            if (!isMobile) {
+                
+                $('.invoice-text:eq(0),.invoice-text:eq(3)').css('width', '100%').css('float', 'right').css('position','absolute').css('display', 'block').css('margin-left', '30px');  
+                $('.td-invoice2-info .invoice-notice').css({'position':'absolute', 'margin-top': '7em', 'display':'block'});
+                $('.radioBox-invoice3').css({'margin-top':'4em'});
+                $('.td-invoice3-info .invoice-notice').css({'display':'none'});
+            }
+            
         }
         else if ($(this).hasClass('radioBox-invoice3')){
+            if (!isMobile) {
+                $('.invoice-text:eq(0),.invoice-text:eq(3)').css('display','none');  
+                $('.td-invoice2-info .invoice-notice').css({display:'none'})  
+                $('.radioBox-invoice3').css({'margin-top':'0'});
+                $('.td-invoice3-info .invoice-notice').css({'position':'absolute', 'display':'block'});
+            }
+            
             $('.td-invoice3-info').addClass('open');
             $('.td-invoice2-info').removeClass('open');
         }
@@ -686,6 +701,7 @@ function cart2Init(){
 function setInvoiceTextWidth(){
     var $invoice2 = $('.td-indent-invoice2');
     $('.invoice-text').css('width', $invoice2.width()-12-$invoice2.width()*0.07);
+    
 }
 
 function selectCountry(){

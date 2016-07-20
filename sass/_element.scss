@@ -751,7 +751,7 @@ hr{ width: 100%; height: 1px; background-color: $colorBlack; border-bottom: 1px 
 .deleteAddress{ display: inline-block; color: #fff; background-color: $colorGray3; cursor: pointer; padding: 0 2%; font-size: $font13; @include border-radius(7px);
   height: 30px; line-height: 30px;}
 // bubble
-.cart-cal-bubble{ background-color: $colorPink8; border: 1px solid $colorPink5; width: 46%; padding: 25px 0 25px 2%; margin: 3.1% 4% 0 0; position: relative;
+.cart-cal-bubble{ background-color: $colorPink8; border: 1px solid $colorPink5; width: 32%; padding: 25px 0 25px 2%; margin: 3.1% 4% 0 0; position: relative;
   &:before { content: ""; position: absolute; right: -4.7%; top : 45%; width: 4.7%; height: 13px; background: url("../images/cart/bubbleArrow.png") no-repeat;
    background-size: 100% auto;}
 }
