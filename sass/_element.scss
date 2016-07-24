@@ -221,6 +221,12 @@ a{ text-decoration: none; cursor: pointer;
       }
     }
   }
+  &.qa-sidebar {
+    margin-top:18px;
+  }
+  &.news-sidebar {
+    margin-top:18px;
+  }
 }
 .proNavListHoverSpe>ul>li:hover{ color: $colorPink17;}
 
