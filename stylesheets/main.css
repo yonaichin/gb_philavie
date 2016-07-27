@@ -7747,7 +7747,7 @@ header .pc nav > ul > li.navOpen {
   /* line 511, ../sass/_style.scss */
   .activity-pro-list li:hover {
     border: 1px solid #ccc;
-    padding: 7px 6px 5px;
+    padding-top: 8px;
   }
   /* line 516, ../sass/_style.scss */
   .activity-pro-list li:hover .activity-pro-img {
